@@ -1,0 +1,653 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: .\translations\ca\messages.py:42 .\translations\ca\messages.py:45
+#: .\translations\ca\messages.py:48
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-13 17:45+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\oralita\settings.py:120
+msgid "Castellano"
+msgstr ""
+
+#: .\oralita\settings.py:121 .\translations\ca\messages.py:7
+msgid "Català"
+msgstr "Catalán"
+
+#: .\translations\ca\especialidades.py:4
+msgid "Odontologia general"
+msgstr ""
+
+#: .\translations\ca\especialidades.py:5
+msgid "Com tractar càries i tenir cura de la salut oral"
+msgstr ""
+
+#: .\translations\ca\especialidades.py:6 .\translations\ca\especialidades.py:16
+#: .\translations\ca\especialidades.py:24
+#: .\translations\ca\especialidades.py:33
+#: .\translations\ca\especialidades.py:55
+msgid "alt_img"
+msgstr ""
+
+#: .\translations\ca\especialidades.py:7
+msgid ""
+"<p>L'odontologia general s'encarrega de solucionar els problemes primaris "
+"que sorgeixen a nivell de la cavitat bucal.  La patologia més freqüentment "
+"diagnosticada és la <strong>CÀRIES DENTAL</strong> i les formes de tractar-"
+"la varien segons la mida de la mateixa.</p>\n"
+"\n"
+"    <p>La càries és un procés de desmineralització del teixit dental que, si "
+"no es tracta a temps, pot portar a la pèrdua de la dent. En una fase inicial "
+"no fa mal i per això el protocol de prevenció en Oralitá preveu un control "
+"anual en el qual es realitzen proves i radiografies per diagnosticar i "
+"tractar les càries com més aviat millor. Aquest tractament, mes conegut com "
+"empastament, consisteix a remoure la part afectada i substituir-la amb "
+"resines de ultimes generació que la majoria de les vegades solucionen el "
+"problema de manera definitiva.</p>\n"
+"\n"
+"    <p>Quan una càries provoca dolor és perquè ha arribat a aquella part de "
+"la dent on estan nervis i vasos sanguinis: la polpa. El tractament "
+"corresponent a aquest cas és l'endodòncia, la finalitat és extirpar aquest "
+"teixit, deixant la dent pràcticament \"sense vida\" i augmentant molt les "
+"possibilitats de perdre-al llarg de la nostra vida.</p>"
+msgstr ""
+
+#: .\translations\ca\especialidades.py:14
+msgid "Implantología"
+msgstr ""
+
+#: .\translations\ca\especialidades.py:15
+msgid "Implants garantits de per vida."
+msgstr ""
+
+#: .\translations\ca\especialidades.py:17
+msgid ""
+"<p>L'implantologia és aquella especialitat que ens permet recol·locar les "
+"dents perdudes mitjançant unes arrels artificials inserides en l'os, els "
+"implants dentals. Depenent de la raó per la qual s'ha perdut (o es va a "
+"perdre) la dent, la tipologia de tractament pot variar; existeixen diferents "
+"tècniques, des de la més convencional fins a la més innovadora que permet "
+"realitzar tot el tractament en un dia.</p>\n"
+"    <p>En Oralitá tots els tractaments d'implantologia estan enfocats en "
+"recol·locar les dents que hem perdut, i la manera de fer-ho depèn de les "
+"exigències de cada pacient. El tractament és individual i no es pot comparar "
+"amb el d'altres.</p>\n"
+"    <p>Al mercat existeixen diferents cases comercials que fabriquen "
+"implants i la seva qualitat pot variar molt. Quan parlem de qualitat, no "
+"parlem només del component quirúrgic (el mateix implant) si no també dels "
+"components protètics. En Oralitá tenim uns estàndards de qualitat molt alts, "
+"per això podem <strong>GARANTIR L'IMPLANT DE PER VIDA</strong>.</p>"
+msgstr ""
+
+#: .\translations\ca\especialidades.py:22
+msgid "Ortodòncia"
+msgstr ""
+
+#: .\translations\ca\especialidades.py:23
+msgid "Invisaling, el sistema més innovador."
+msgstr ""
+
+#: .\translations\ca\especialidades.py:25
+msgid ""
+"<p>És l'especialitat que s'ocupa de corretgir maloclusions, és a dir "
+"aquelles patologies on les dents superiors contacten de forma equivocada amb "
+"les dents inferiors. La presència de dents desalineats, a més de comportar "
+"problemes masticatorios i alterar l'estètica del nostre somriure, augmenta "
+"el risc de càries.</p>\n"
+"    <p><strong>A ADULTS</strong>, tenint en consideració els resultats que "
+"es vulguin aconseguir i les exigències individuals, hi ha diferents sistemes "
+"de tractament. Els que més utilitzem en Oralitá són el sistema INVISALIGN i "
+"els BRACKETS tradicionals.</p>\n"
+"    <p><strong>A EDAT PEDIÀTRICA </strong>,  a més de l'estat dental,valorem "
+"també el creixement ossi facial que si no és correcte pot portar a el "
+"desenvolupament d'una maloclusió. en aquests casos, aconsellem un tractament "
+"de <strong>ORTODÒNCIA INTERCEPTIVA</strong>, on gràcies a diferents "
+"metodologies podem corregir aquest creixement (utilitzem aparatologia fixa, "
+"removible o una combinació de les dues).</p>\n"
+"    <p>A la majoria dels casos, quan es realitza un tractament d'ortodòncia "
+"<strong>INTERCEPTIVA</strong>, el pacient no necessitarà tractaments "
+"ortodòntics en edat adulta.</p>"
+msgstr ""
+
+#: .\translations\ca\especialidades.py:31
+msgid "Odontopediatría"
+msgstr ""
+
+#: .\translations\ca\especialidades.py:32
+msgid "Tractar abans és tractar menys.."
+msgstr ""
+
+#: .\translations\ca\especialidades.py:34
+msgid ""
+"\n"
+"        <p>En Oralitá nens i nenes són pacients que mereixen atenció "
+"especial. En ells, encara més, val el principi de diagnòstic preventiu, per "
+"la correcció primerenca d'aquells problemes que podrien causar patologies en "
+"el futur. Sobretot és important sensibilitzar els petits, des de molt aviat, "
+"a portar una correcta higiene oral i uns hàbits alimentaris sans..</p>\n"
+"            <p>\n"
+"                El protocol pediàtric es basa en:\n"
+"                <ul>\n"
+"                    <li>\n"
+"                        Revisions periòdiques on impartim classes de "
+"raspallat dental i eduquem els nens i nenes a tenir cura de la seva boca de "
+"forma correcta i autònoma\n"
+"                    </li>\n"
+"                    <li>\n"
+"                    Considerem eventuals tractaments de prevenció per "
+"enfortir l'esmalt de les dents, especialment  en pacients que hagin patit "
+"càries\n"
+"                    </li>\n"
+"                    <li>\n"
+"                    Valorem el creixement facial per detectar eventuals "
+"patologies òssies en la seva fase més primerenca i poder tractar-les amb "
+"ortodòncia interceptiva.\n"
+"                    </li>\n"
+"                </ul>\n"
+"            </p>    \n"
+"        "
+msgstr ""
+
+#: .\translations\ca\especialidades.py:53
+msgid "Pròtesis"
+msgstr ""
+
+#: .\translations\ca\especialidades.py:54
+msgid "Torna a somriure."
+msgstr ""
+
+#: .\translations\ca\especialidades.py:56
+msgid ""
+"\n"
+"        <p>El requisit primari de cada pròtesi és exercir una correcta "
+"funció masticatòria i tornar estètica al nostre somriure. En Oralitá, solem "
+"suggerir pròtesis fixes: amb elles obtenim resultats més duradors, més "
+"funcionals, més estètics i molt més pràctics per la vida quotidiana.. </p>\n"
+"        <p>Perquè un tractament protèsic tingui èxit, ens enfoquem "
+"especialment en l'elecció de la pròtesi i del material amb el qual es "
+"realitzarà; el treball d'assessorament al pacient en aquesta fase és "
+"probablement la part més important. No hi ha una pròtesi millor que una "
+"altra, però sí que hi ha una pròtesi més indicada que una altra.. </p>\n"
+"        <p>En Oralitá treballem amb diferents materials, des dels més "
+"tradicionals als d'última generació que no porten metall (metall-free), com "
+"el disilicato de liti, el zirconi i la ceràmica. Igual que molts tractaments "
+"dentals, una pròtesi correctament realitzada dura molts anys.</p>\n"
+"        <h3>En Oralitá garantim les nostres pròtesis per 10 anys.</h3>\n"
+"        "
+msgstr ""
+
+#: .\translations\ca\messages.py:4
+msgid "Castellà"
+msgstr ""
+
+#: .\translations\ca\messages.py:5
+msgid "Francès"
+msgstr ""
+
+#: .\translations\ca\messages.py:6
+msgid "Anglès"
+msgstr ""
+
+#: .\translations\ca\messages.py:8
+msgid "Italià"
+msgstr ""
+
+#: .\translations\ca\messages.py:11
+msgid "Oralitá"
+msgstr ""
+
+#: .\translations\ca\messages.py:12
+msgid "nom"
+msgstr ""
+
+#: .\translations\ca\messages.py:13
+msgid "Telèfon"
+msgstr ""
+
+#: .\translations\ca\messages.py:14
+msgid "email"
+msgstr ""
+
+#: .\translations\ca\messages.py:15
+msgid "937 978 493"
+msgstr ""
+
+#: .\translations\ca\messages.py:16
+msgid "info@oralita.com"
+msgstr ""
+
+#: .\translations\ca\messages.py:17
+msgid "Carrer de Vallirana, 28 08006 Barcelona"
+msgstr ""
+
+#: .\translations\ca\messages.py:18
+msgid "Demana la teva cita"
+msgstr ""
+
+#: .\translations\ca\messages.py:19
+msgid "Demana"
+msgstr ""
+
+#: .\translations\ca\messages.py:20
+msgid "Data"
+msgstr ""
+
+#: .\translations\ca\messages.py:21
+msgid "Hora"
+msgstr ""
+
+#: .\translations\ca\messages.py:22
+msgid "Anul·lar"
+msgstr ""
+
+#: .\translations\ca\messages.py:23
+msgid "Gràcies per validar el captcha"
+msgstr ""
+
+#: .\translations\ca\messages.py:24
+msgid ""
+"Copyright &copy; 2017 Oralitá | Made by <a href=\"http://www.david-courtey."
+"com/\" target=\"_blank\">David Courtey</a>"
+msgstr ""
+
+#: .\translations\ca\messages.py:27 .\translations\ca\messages.py:30
+msgid "Clínica Dental - Odontologia i Medicina Oral"
+msgstr ""
+
+#: .\translations\ca\messages.py:28
+msgid "Oralitá - Odontologia i medicina oral italiana"
+msgstr ""
+
+#: .\translations\ca\messages.py:29
+msgid ""
+"Dr. Matteo Ricucci odontòleg i responsable sanitari - Primera visita gratuïta"
+msgstr ""
+
+#: .\translations\ca\messages.py:31
+msgid ""
+"Clinica, Dental, Dentista, Barcelona, Odontologia, Oralitá, Medicina, Oral, "
+"Barcelona, Dr. Matteo Ricucci"
+msgstr ""
+
+#: .\translations\ca\messages.py:34
+msgid "Home"
+msgstr ""
+
+#: .\translations\ca\messages.py:36 .\translations\ca\messages.py:39
+msgid "Clínica Dental - Oralitá"
+msgstr ""
+
+#: .\translations\ca\messages.py:37 .\translations\ca\messages.py:40
+msgid "photo clínica Dental Oralitá"
+msgstr ""
+
+#: .\translations\ca\messages.py:43 .\translations\ca\messages.py:46
+#: .\translations\ca\messages.py:49
+msgid "photo clínica dental Oralitá"
+msgstr ""
+
+#: .\translations\ca\messages.py:52 .\translations\ca\messages.py:131
+#: .\translations\ca\messages.py:132
+msgid "Primera visita"
+msgstr ""
+
+#: .\translations\ca\messages.py:53
+msgid ""
+"El diagnòstic és el primer pas, el més important. En Oralitá realitzem una "
+"primera visita completa, sense compromís"
+msgstr ""
+
+#: .\translations\ca\messages.py:55
+msgid "Radiologia digital"
+msgstr ""
+
+#: .\translations\ca\messages.py:56
+msgid ""
+"Per a un correcte diagnòstic, és imprescindible una radiografia, per això, "
+"oferim als nostres pacients l'últim en radiologia digital, sense cap cost."
+msgstr ""
+
+#: .\translations\ca\messages.py:58
+msgid "Tractaments pioners"
+msgstr ""
+
+#: .\translations\ca\messages.py:59
+msgid ""
+" <ul style=\"text-align: left\">\n"
+"                            <li>Ortodòncia invisible </li>\n"
+"                            <li>Pròtesis sense metall </li>\n"
+"                            <li>Blanquejament</li>\n"
+"                        </ul>"
+msgstr ""
+
+#: .\translations\ca\messages.py:65
+msgid "facilitats de pagament"
+msgstr ""
+
+#: .\translations\ca\messages.py:66
+#, python-format
+msgid ""
+"<ul style=\"text-align: left\">\n"
+"                            <li>Pagament per avançat (10% descompte extra) </"
+"li>\n"
+"                            <li>Finançament fins a 60 mesos (12 mesos sense "
+"interessos)</li>\n"
+"                            <li>Pagament fraccionat (segons tractament "
+"realitzat) </li>\n"
+"                        </ul>"
+msgstr ""
+
+#: .\translations\ca\messages.py:73
+msgid "PERQUÈ NOSALTRES:"
+msgstr ""
+
+#: .\translations\ca\messages.py:74
+msgid "Donem la cara"
+msgstr ""
+
+#: .\translations\ca\messages.py:75
+msgid ""
+"Som una clínica orientada a tractaments odontològics integrals. Oferim un "
+"ampli ventall d'especialitats en medicina oral i un servei personalitzat de "
+"confiança i proximitat."
+msgstr ""
+
+#: .\translations\ca\messages.py:76
+msgid ""
+"<ul class=\"text-list\" style=\"font-size: 18px;\">\n"
+"                            <li>Prevenció</li>\n"
+"                            <li>Equip especialitzat </li>\n"
+"                            <li>Qualitat de materials </li>\n"
+"                            <li>Innovació</li>\n"
+"                            <li>Proximitat</li>\n"
+"                        </ul>"
+msgstr ""
+
+#: .\translations\ca\messages.py:85
+msgid "Especialitats"
+msgstr ""
+
+#: .\translations\ca\messages.py:86
+msgid "Les nostres especialitats"
+msgstr ""
+
+#: .\translations\ca\messages.py:87
+msgid "Oralitá - Les nostres especialitats"
+msgstr ""
+
+#: .\translations\ca\messages.py:88
+msgid "La teva salut és la nostra missió, la teva missió és somriure"
+msgstr ""
+
+#: .\translations\ca\messages.py:91
+msgid "Qui som"
+msgstr ""
+
+#: .\translations\ca\messages.py:92
+msgid "Oralitá - Qui som"
+msgstr ""
+
+#: .\translations\ca\messages.py:93
+msgid ""
+"Sóc el Dr. Matteo Ricucci, dentista italià llicenciat en -Odontologìa i "
+"Pròtesi dental- per la universitat italiana de Pavia."
+msgstr ""
+
+#: .\translations\ca\messages.py:94
+msgid ""
+"Informació sobre el nostre dentista Dr. Matteo Ricucci dentista italià "
+"llicenciat en -Odontologìa i Pròtesi denta- per la universitat italiana de "
+"Pavia."
+msgstr ""
+
+#: .\translations\ca\messages.py:95
+msgid ""
+"informació, dentista, italià, odontologia, barcelona, odontòleg, metge, "
+"Matteo Ricucci"
+msgstr ""
+
+#: .\translations\ca\messages.py:96
+msgid "Dr. Matteo Ricucci"
+msgstr ""
+
+#: .\translations\ca\messages.py:97
+msgid "Odontòleg i responsable sanitari"
+msgstr ""
+
+#: .\translations\ca\messages.py:98
+msgid "Matteo Ricucci Dentista Italià"
+msgstr ""
+
+#: .\translations\ca\messages.py:99
+msgid "Colegiado COEC N°5657"
+msgstr ""
+
+#: .\translations\ca\messages.py:100
+msgid ""
+" <div class=\"doctor-text-quote\">L'èxit s'aconsegueix amb treball, passió, "
+"humilitat i sobretot ètica i respecte cap a les persones; és molt important "
+"assessorar i entendre quines són les necessitats de cada un per poder oferir-"
+"li el tractament més adequat.\n"
+"                    <div class=\"doctor-text-quote-quote\"><img src=\"images/"
+"quote.png\" alt=\"\" /></div>\n"
+"                </div>\n"
+"\n"
+"                <p>Sóc el Dr. Matteo Ricucci, dentista italià llicenciat en -"
+"Odontologìa i Pròtesi dental- per la universitat italiana de Pavia. El 2008 "
+"decideixo mudar-me a Barcelona i començar la meva carrera professional; "
+"durant els últims deu anys he treballat com a especialista en pròtesis i "
+"estètica dental en diferents clíniques de la ciutat i, gràcies als molts "
+"tractaments realitzats, he pogut perfeccionar la meva tècnica i créixer dia "
+"rere dia. </p>\n"
+"\n"
+"                <p>La passió pel que faig i el perfeccionisme que em "
+"caracteritzen han fet primària la necessitat de treballar per compte propi; "
+"per aconseguir resultats de qualitat i amb garantia d'èxit és imperiós poder "
+"triar material, instrumental clínic i metodologia. </p>\n"
+"\n"
+"                <p>D'aquí es concreta Oralitá, la meva clínica dental, un "
+"projecte fet amb tot l'afecte i la il·lusió de qui ho dóna tot per millorar. "
+"</p>\n"
+"            "
+msgstr ""
+
+#: .\translations\ca\messages.py:112 .\translations\ca\messages.py:113
+msgid "On és la nostra clínica dental"
+msgstr ""
+
+#: .\translations\ca\messages.py:114
+msgid "Oralitá - On és la nostra clínica dental"
+msgstr ""
+
+#: .\translations\ca\messages.py:115
+msgid "Informació sobre com trobar-nos"
+msgstr ""
+
+#: .\translations\ca\messages.py:116
+msgid "Informació sobre com trobar-nos i fer una cita amb el nostre dentista"
+msgstr ""
+
+#: .\translations\ca\messages.py:117
+msgid "informació, cita, trobar-nos, dentista, barcelona, Gràcia, Lesseps"
+msgstr ""
+
+#: .\translations\ca\messages.py:118
+msgid "<span>Carrer de Vallirana, 28 <br> 08006 Barcelona</span> "
+msgstr ""
+
+#: .\translations\ca\messages.py:119
+msgid "Com arribar"
+msgstr ""
+
+#: .\translations\ca\messages.py:121
+msgid "Metro"
+msgstr ""
+
+#: .\translations\ca\messages.py:122
+msgid "L3 Lesseps<br>L3 Fontana"
+msgstr ""
+
+#: .\translations\ca\messages.py:124
+msgid "FGC"
+msgstr ""
+
+#: .\translations\ca\messages.py:125
+msgid "Sant Gervasi"
+msgstr ""
+
+#: .\translations\ca\messages.py:127
+msgid "Bus"
+msgstr ""
+
+#: .\translations\ca\messages.py:128
+msgid "22, 24, 27, 32, V17, D40"
+msgstr ""
+
+#: .\translations\ca\messages.py:133
+msgid "Oralitá - Primera visita gratuïta"
+msgstr ""
+
+#: .\translations\ca\messages.py:134 .\translations\ca\messages.py:151
+#, python-format
+msgid ""
+"Oralitá il dentista italiano di Barcellona ti offre una prima visita "
+"gratuita con radiografía e sconti fino al 50% su molte prestazioni."
+msgstr ""
+
+#: .\translations\ca\messages.py:135 .\translations\ca\messages.py:136
+msgid "Vine a conèixer-nos sense compromís"
+msgstr ""
+
+#: .\translations\ca\messages.py:137
+msgid "demanar, visita, sense compromís"
+msgstr ""
+
+#: .\translations\ca\messages.py:138
+msgid ""
+"L'enfocament d'una primera visita és valorar la salut bucodental del pacient "
+"sota diferents punts de vista. La nostra metodologia consta en:\n"
+"            <ul>\n"
+"                <li>Examinar l'estat de dents i genives. Cal que tant les "
+"càries com eventuals patologies gingivals siguin tractades per prevenir "
+"problemes majors.</li>\n"
+"        \n"
+"\n"
+"                <li>Comprovar la funció masticatòria. Les dents serveixen "
+"per triturar, l'absència d'un o més d'ells i una mala oclusió, poden alterar "
+"el procés digestiu, generat diferents patologies.</li> \n"
+"                <li>Estètica. Si el pacient vol millorar l'harmonia del seu "
+"somriure, disposem d'una sèrie de tractaments que ens garanteixen resultats "
+"excel·lents sense comprometre la salut bucodental.</li>\n"
+"            </ul>"
+msgstr ""
+
+#: .\translations\ca\messages.py:148
+msgid "Contacte"
+msgstr ""
+
+#: .\translations\ca\messages.py:149
+msgid "Contacte i fer una cita amb el nostre dentista"
+msgstr ""
+
+#: .\translations\ca\messages.py:150
+msgid "Oralitá - Contacte i fer una primera visita gratuïta"
+msgstr ""
+
+#: .\translations\ca\messages.py:152
+msgid "formula de contacte en italià o espanyol"
+msgstr ""
+
+#: .\translations\ca\messages.py:153
+msgid ""
+"contacte, formula, cita, dentista, barcelona, dentista italià, Gràcia, "
+"Lesseps"
+msgstr ""
+
+#: .\translations\ca\messages.py:156
+msgid "Gràcies de la seva sol·licitud"
+msgstr ""
+
+#: .\translations\ca\messages.py:157 .\translations\ca\messages.py:162
+msgid ""
+"La seva sol.licitud de cita ha estat enviada. Ens posarem en contacte amb "
+"vostè el més aviat possible"
+msgstr ""
+
+#: .\translations\ca\messages.py:160
+msgid "Primera visita sense compromís"
+msgstr ""
+
+#: .\translations\ca\messages.py:161
+msgid "Sembla que t'estàs perdent alguna informació. Intenta-ho de nou."
+msgstr ""
+
+#: .\translations\ca\messages.py:163
+msgid "Motiu de la visita ..."
+msgstr ""
+
+#: .\translations\ca\messages.py:166
+msgid "HORARI D'ATENCIÓ"
+msgstr ""
+
+#: .\translations\ca\messages.py:167
+msgid "ALTRES HORARIS AMB CITA PRÈVIA"
+msgstr ""
+
+#: .\translations\ca\messages.py:169
+msgid "Dilluns"
+msgstr ""
+
+#: .\translations\ca\messages.py:170
+msgid "15h a 19h"
+msgstr ""
+
+#: .\translations\ca\messages.py:172
+msgid "Dimarts"
+msgstr ""
+
+#: .\translations\ca\messages.py:173 .\translations\ca\messages.py:176
+#: .\translations\ca\messages.py:179
+msgid "10h a 19h"
+msgstr ""
+
+#: .\translations\ca\messages.py:175
+msgid "Dimecres"
+msgstr ""
+
+#: .\translations\ca\messages.py:178
+msgid "Dijous"
+msgstr ""
+
+#: .\translations\ca\messages.py:181
+msgid "Divendres"
+msgstr ""
+
+#: .\translations\ca\messages.py:182
+msgid "10h a 14h"
+msgstr ""
+
+#: .\translations\ca\messages.py:184
+msgid "Dissabte"
+msgstr ""
+
+#: .\translations\ca\messages.py:185 .\translations\ca\messages.py:188
+msgid "Tancat"
+msgstr ""
+
+#: .\translations\ca\messages.py:187
+msgid "Diumenge"
+msgstr ""
