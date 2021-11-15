@@ -12,7 +12,7 @@
     <meta property="og:description" content="{% block og_description %}{% translate default.og_description %}{% endblock %}" />
     <meta property="og:type" content="{% block og_type %}website{% endblock %}" />
     <meta property="og:url" content="{% block og_url %}{% url 'index:home' %}{% endblock %}" />
-    <meta property="og:image" content="{% block og_image %}{% static 'images/primera_visita.jpg' %}{% endblock %}" />
+    <meta property="og:image" content="{% block og_image %}{% static 'index/images/primera_visita.jpg' %}{% endblock %}" />
     <link rel="canonical" href="{% block canonical %}{% url 'index:home' %}{% endblock %}"/>
     <meta name="author" content="Matteo Ricucci">
 
@@ -31,7 +31,7 @@
          STYLESHEETS
     ============================== -->
     {% block stylesheets %}
-        <link rel="stylesheet" href= {% static 'build/app.css' %}>
+        <link rel="stylesheet" href= {% static 'index/build/app.css' %}>
     {% endblock %}
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113534654-1"></script>
@@ -52,6 +52,6 @@
      END MAIN MENU
 ============================== -->
 {% block body %}{% endblock %}
-{% include "includes/footer.html.twig" %}
+{% include "includes/footer.html" %}
 </body>
 </html>

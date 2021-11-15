@@ -1,3 +1,5 @@
+{% load i18n %}
+{% load static %}
 <!-- =========================
     FOOTER
 ============================== -->
@@ -16,7 +18,7 @@
 
             <!-- FOOTER ITEM 3 -->
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-item footer-item-3 footer-matchheight" id="footer-item-3">
-                <h3 class="footer-title"><a href={% url 'index:contact' %}><i class="fa fa-map-marker"></i> {% translate contact.menu_page_name %}</a></h3>
+                <h3 class="footer-title"><a href={#{% url 'index:contact' %}#}><i class="fa fa-map-marker"></i> {% translate contact.menu_page_name %}</a></h3>
                 <div class="footer-item-3-phone"> <i class="fa fa-phone"></i> {% translate global.phone %} </div>
                 <div class="footer-item-3-location"><a href="https://www.google.com/maps/place/Cl%C3%ADnica+Dental+Oralit%C3%A1-+odontolog%C3%ADa+y+medicina+oral/@41.403573,2.14856,19z/data=!4m5!3m4!1s0x0:0x679ffd40d4873d99!8m2!3d41.4035728!4d2.1485595"><i class="flaticon-navigation-arrow"></i> {% translate global.address %} </a></div>
                 <div class="footer-item-3-mail"> <i class="fa fa-envelope"></i> <a  href="#bookform1" class="fancybox-2">{% translate global.email %}</a> </div>
@@ -38,47 +40,47 @@
      SCRIPTS
 ============================== -->
 <!-- JQUERY -->
-<script src={% static '/js/jquery-2.2.0.min.js' %}></script>
+<script src={% static 'index/js/jquery-2.2.0.min.js' %}></script>
 
 <!-- BOOTSTRAP -->
-<script src={% static '/js/bootstrap.min.js' %}></script>
+<script src={% static 'index/js/bootstrap.min.js' %}></script>
 
 <!-- SLIDER PRO -->
-<script src={% static '/js/jquery.sliderPro.min.js' %}></script>
+<script src={% static 'index/js/jquery.sliderPro.min.js' %}></script>
 
 <!-- LIGHTBOX -->
-<script src={% static '/js/jquery.fancybox.pack.js' %}></script>
+<script src={% static 'index/js/jquery.fancybox.pack.js' %}></script>
 
 <!-- CAROUSEL -->
-<script src={% static '/js/owl.carousel.js' %}></script>
+<script src={% static 'index/js/owl.carousel.js' %}></script>
 
 <!-- STAR RATING -->
-<script src={% static '/js/jquery.barrating.min.js' %}></script>
+<script src={% static 'index/js/jquery.barrating.min.js' %}></script>
 
 <!-- ISOTOPE FILTER -->
-<script src={% static '/js/isotope.pkgd.min.js' %}></script>
+<script src={% static 'index/js/isotope.pkgd.min.js' %}></script>
 
 <!-- SCROLLSPY -->
-<script src={% static '/js/scrollspy.js' %}></script>
+<script src={% static 'index/js/scrollspy.js' %}></script>
 
 <!-- DATEPICKER -->
-<script src={% static '/js/moment.js' %}></script>
-<script src={% static '/js/bootstrap-datetimepicker.min.js' %}></script>
+<script src={% static 'index/js/moment.js' %}></script>
+<script src={% static 'index/js/bootstrap-datetimepicker.min.js' %}></script>
 
 <!-- JQUERY FORM -->
-<script src={% static '/js/jquery.form.js' %}></script>
+<script src={% static 'index/js/jquery.form.js' %}></script>
 
 <!-- FORM VALIDATOR -->
-<script src={% static '/js/jquery.form-validator.js' %}></script>
+<script src={% static 'index/js/jquery.form-validator.js' %}></script>
 
 <!-- SELECT STYLING -->
-<script src={% static '/js/jquery.selectBox.js' %}></script>
+<script src={% static 'index/js/jquery.selectBox.js' %}></script>
 
 <!-- MATCHHEIGHT -->
-<script src={% static '/js/jquery.matchHeight.js' %}></script>
+<script src={% static 'index/js/jquery.matchHeight.js' %}></script>
 
 <!-- CUSTOM SCRIPT -->
-<script src={% static '/js/theme.js' %}></script>
+<script src={% static 'index/js/theme.js' %}></script>
 
 <!-- GOOGLE MAPS -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD75G3uNitdrg1fxknGd5t2UutlrZt9piU&amp;language=es&amp;sensor=true"></script>

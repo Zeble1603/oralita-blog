@@ -1,0 +1,18 @@
+.g-recaptcha {
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: justify;
+}
+.especialidade {
+    padding: 70px 15px 90px 15px;
+    border-bottom: 1px solid #becacf;
+}
+.especialidade-image img{
+    max-width: 100%;
+}
+
+.thumbnail {
+    max-height: 350px;
+}

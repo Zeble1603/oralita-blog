@@ -1,0 +1,30 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+-------------------------------------------------------------------*/
+
+/* LIBRARIES CSS */
+@import url('lib/bootstrap.css');
+@import url('lib/animate.css');
+
+/* FONTS*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800,800italic,700italic,600italic,400italic,300italic);
+@import url('../font-awesome/css/font-awesome.min.css');
+@import url('../flaticon/flaticon.css');
+
+/* PLUGIN CSS */
+@import url('lib/slider-pro.css');
+@import url('lib/jquery.fancybox.css');
+@import url('lib/owl.carousel.css');
+@import url('lib/owl.theme.css');
+@import url('lib/owl.transitions.css');
+@import url('lib/bootstrap-datetimepicker.css');
+@import url('lib/jquery.selectBox.css');
+@import url('lib/fontawesome-stars-o.css');
+
+/* CUSTOM CSS */
+@import url('lib/theme.css');
+/*@import url('theme_violet.css');*/
+/*@import url('theme_red.css');*/
+/*@import url('theme_green.css');*/
+@import url('responsive.css');
+@import url('custom.css');
