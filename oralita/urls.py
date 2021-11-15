@@ -26,5 +26,5 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns (
-    path('', include('index.urls', namespace='index')),
+    path('', include('index.urls', namespace='index')),prefix_default_language=True
 )

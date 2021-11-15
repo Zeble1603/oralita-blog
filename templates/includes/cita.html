@@ -1,0 +1,49 @@
+{% load i18n %}
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 make-text">
+        <h3>{% translate form.title|upper%}</h3>
+        <form class="bookform-form" action="" role="form" method="post">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 booking-form-item name">
+                    <input type="text" name="name" id="name1" data-validation="required" placeholder="{% translate global.name_label|upper %}" />
+                    <div class="help help-sm help-red">!</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 booking-form-item phone">
+                    <input type="text" name="phone" id="phone1" data-validation="required" placeholder="{% translate global.phone_label|upper %}" />
+                    <div class="help help-sm help-red">!</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 booking-form-item email">
+                    <input type="text" name="email" id="email1" placeholder="{% translate global.email_label|upper %}" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 booking-form-item date">
+                    <input type="text" class="datepicker-f" id="datepicker1" name="date" data-validation="required" placeholder="{% translate global.date|upper %}" />
+                    <div class="help help-sm help-red">!</div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 booking-form-item time-f">
+                    <input type="text" class="timepicker-f" id="timepicker1" value="10:00" name="time" data-validation="required" placeholder="{% translate global.hour|upper %}" />
+                    <div class="help help-sm help-red">!</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 booking-form-item">
+                    <textarea name="message" id="message1" placeholder="{% translate form.message|upper %}"></textarea>
+                </div>
+            </div>
+            <div class="row latest-row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 booking-form-item">
+                    <div class="g-recaptcha" data-sitekey="6LfZs1EUAAAAALYlx26ZvWjdSYzUKSkzsajKwa_j"></div>
+                    <button class="btn btn-primary">{% translate global.appointment_action|upper %}</button>
+                    <a class="fb-close" id="fb-close1" href="javascript:jQuery.fancybox.close();">{% translate global.cancel|upper %}</a> </div>
+            </div>
+            <div class="form-messages form-messages-modal"></div>
+        </form>
+
+    </div>
+</div>
+
