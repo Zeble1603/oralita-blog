@@ -15,8 +15,8 @@ def homeview(request):
         'especialidades':Especialidades,
         'quienes_somos': QuienesSomos,
         'donde':Donde,
-        'primera_visita':PrimeraVisita,
-        
+        'primera_visita':PrimeraVisita,  
+        'horario':Horario,  
     }
     return render(request, 'base.html', context=context)
 

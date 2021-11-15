@@ -1,0 +1,21 @@
+{% load i18n %}
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer-item footer-item-2">
+    <h3 class="footer-title footer-title-line"><i class="fa fa-clock-o"></i>{% translate horario.title|upper%} *</h3>
+    <div class="opening-left">
+        {% translate horario.monday.name %}<br>
+        {% translate horario.tuesday.name %}<br>
+        {% translate horario.wednesday.name %}}<br>
+        {% translate horario.thursday.name %}<br>
+        {% translate horario.friday.name %}<br>
+        {% translate horario.saturday.name %}<br>
+        {% translate horario.sunday.name %} </div>
+    <div class="opening-right">
+        {% translate horario.monday.open %}<br>
+        {% translate horario.tuesday.open %}<br>
+        {% translate horario.wednesday.open %}}<br>
+        {% translate horario.thursday.open %}<br>
+        {% translate horario.friday.open %}<br>
+        {% translate horario.saturday.open %}<br>
+        {% translate horario.sunday.open %} </div>
+</div>
+<div style="color: white">* {% translate horario.extra|upper%}</div>
