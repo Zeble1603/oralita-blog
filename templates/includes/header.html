@@ -1,6 +1,6 @@
 {% load i18n %}
 {% load static %}
-<div class="preloader" id="preloader"> <img src="{% static 'images/preloader.gif' %}" alt="" /> </div>
+<div class="preloader" id="preloader"> <img src="{% static 'index/images/preloader.gif' %}" alt="" /> </div>
 <!-- =========================
      TOP BAR
 ============================== -->
@@ -22,7 +22,7 @@
                             {% get_available_languages as LANGUAGES %}
                             {% get_language_info_list for LANGUAGES as languages %}
                             {% for lang in languages %}                            
-                                <option value = "{{lang.code}}" {% if lang.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                                <option value="/{{lang.code}}" {% if lang.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
                                     {{ lang.name_local }}
                                 </option>
                             {% endfor %}    
@@ -50,7 +50,7 @@
 
             <!-- HEADER LOGO -->
             <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
-                <div class="header-logo"> <a href="{% url 'index:home' %}"><img src="{% static 'images/logo.png' %}" alt="{% translate default.title %}" />
+                <div class="header-logo"> <a href="{% url 'index:home' %}"><img src="{% static 'index/images/logo.png' %}" alt="{% translate default.title %}" />
                         <span class="bold600 color-child-6"> </span>
                         <span class="color-child-5"> </span>
                     </a> </div>
@@ -79,7 +79,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="mobile-bar-cont">
-                    <div class="top-menu-logo"> <a href="{% url 'index:home' %}"><img src="{% static 'images/logo_sm.png' %}" alt="{% translate default.title %}" />
+                    <div class="top-menu-logo"> <a href="{% url 'index:home' %}"><img src="{% static 'index/images/logo_sm.png' %}" alt="{% translate default.title %}" />
                             <span class="bold600 color-child-6">{% translate global.site_name|capfirst %}</span>
                         </a> </div>
                     <div class="mobile-bar">
@@ -95,19 +95,19 @@
                     <li class="dropdown"> <a data-toggle="dropdown disabled" href="{#{% url 'index:especialidades' %}#}">
                             {% translate especialidades.menu_page_name|capfirst %}</a>
                         <ul class="dropdown-menu with-bg" role="menu" style="padding-right: 325px;">
-                            <!-- TO CHECK {{ render(controller(
+                            <!--{{ render(controller(
                                 'App\\Controller\\PagesController::especialidadesListMenu'
-                            )) }} -->
+                            )) }}-->
                         </ul>
                     </li>
-                    {% url 'index:quienes-somos' as quienessomos %}
-                    <li class="{% if request.path == quienessomos %}active{% endif %}">
-                        <a href="{{ quienessomos }}">{% translate quienes_somos.menu_page_name|capfirst %}</a>
+                    {% url 'index:quienes-somos' as quien %}
+                    <li class="{% if request.path == quien %}active{% endif %}">
+                        <a href="{{ quien }}">{% translate quienes_somos.menu_page_name|capfirst %}</a>
                     </li>
-                    {#{% url 'index:donde' as donde %}#}
-                    <li class="{#{% if request.path == donde %}active{% endif %}#}">
-                        <a href="{#{{ donde }}#}">{% translate donde.menu_page_name|capfirst %}</a>
-                    </li>
+                    <!--{% url 'index:donde' as donde %}
+                    <li class="{% if request.path == donde %}active{% endif %}">
+                        <a href="{{ donde }}">{% translate donde.menu_page_name|capfirst %}</a>
+                    </li>-->
                     {#{% url 'index:primera_visita' as primera_visita %}#}
                     <li class="{#{% if request.path == primera_visita %}active{% endif %}#}">
                         <a href="{#{{ primera_visita }}#}">{% translate primera_visita.menu_page_name|capfirst %}</a>

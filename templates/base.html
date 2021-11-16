@@ -11,9 +11,9 @@
     <meta property="og:title" content="{% block og_title %}{% translate default.og_title %}{% endblock %}" />
     <meta property="og:description" content="{% block og_description %}{% translate default.og_description %}{% endblock %}" />
     <meta property="og:type" content="{% block og_type %}website{% endblock %}" />
-    <meta property="og:url" content="{% block og_url %}{% url 'index:home' %}{% endblock %}" />
+    <meta property="og:url" content="{% block og_url %}{% url 'index:donde' %}{% endblock %}" />
     <meta property="og:image" content="{% block og_image %}{% static 'index/images/primera_visita.jpg' %}{% endblock %}" />
-    <link rel="canonical" href="{% block canonical %}{% url 'index:home' %}{% endblock %}"/>
+    <link rel="canonical" href="{% block canonical %}{% url 'index:donde' %}{% endblock %}"/>
     <meta name="author" content="Matteo Ricucci">
 
     <!-- SITE TITLE -->
@@ -53,5 +53,8 @@
 ============================== -->
 {% block body %}{% endblock %}
 {% include "includes/footer.html" %}
+{% block javascripts %}
+    <script src="{% static 'index/build/app.js' %}"></script>
+{% endblock %}
 </body>
 </html>

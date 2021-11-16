@@ -1,2 +1,1 @@
-header.html l.96 --> check with David 
-quienes_somos l.6 : <!--{{ absolute_url(asset('/images/Matteo_Ricucci_Dentista_Italiano_2.jpg')) }}-->
+header.html l.98 --> check with David 

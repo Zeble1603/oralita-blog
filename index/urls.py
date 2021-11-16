@@ -22,5 +22,6 @@ app_name = 'index'
 urlpatterns = [
     path('', views.homeview,name='home'),
     path('quienes-somos',views.quien,name='quienes-somos'),
-    
+    path('donde',views.donde,name='donde'),
+
 ]

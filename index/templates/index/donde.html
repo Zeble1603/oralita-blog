@@ -1,17 +1,19 @@
-{% extends "base.html.twig" %}
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
 
-{% block title %}{{ "donde.title"|trans }}{% endblock %}
-{% block og_title %}{{ "donde.og_title"|trans }}{% endblock %}
-{% block og_description %}{{ "donde.og_description"|trans }}{% endblock %}
-{% block meta_description %}{{ "donde.meta_description"|trans }}{% endblock %}
-{% block meta_keywords %}{{ "donde.meta_keywords"|trans }}{% endblock %}
+{% block title %}{% translate donde.title %}{% endblock %}
+{% block og_title %}{% translate donde.og_title %}{% endblock %}
+{% block og_description %}{% translate donde.og_description %}{% endblock %}
+{% block meta_description %}{% translate donde.meta_description %}{% endblock %}
+{% block meta_keywords %}{% translate donde.meta_keywords %}{% endblock %}
 
 {% block body %}
 
 <div class="page-title page-title-contacts bg-pattern" data-bgcolor="595a5a">
     <div class="page-title-overlay">
         <div class="container">
-            <h1>{{ "donde.title"|trans }}</h1>
+            <h1>{% translate donde.title %}</h1>
         </div>
     </div>
 </div>
@@ -19,8 +21,8 @@
     <div class="container">
         <div class="row">
             <ol class="breadcrumb">
-                <li class="breadcrumb-home"><a href="{{ path('homepage') }}"><i class="fa fa-home"></i></a></li>
-                <li class="active">{{ "donde.title"|trans }}</li>
+                <li class="breadcrumb-home"><a href="{% url 'index:home' %}"><i class="fa fa-home"></i></a></li>
+                <li class="active">{% translate donde.title %}</li>
             </ol>
         </div>
     </div>
@@ -32,17 +34,17 @@
     <div class="map-info" id="map-info">
         <div class="map-info-contacts">
             <div class="map-info-phone"> <i class="fa fa-phone"></i>
-                <span>{{ "global.phone"|trans }}</span>
+                <span>{% translate global.phone %}</span>
             </div>
             <div class="map-info-mail"> <i class="fa fa-envelope"></i>
                 <span>
                     <a href="#bookform1" class="fancybox-2">
-                        {{ "global.email"|trans }}
+                        {% translate global.email %}
                     </a>
                 </span>
             </div>
             <div class="map-info-location"> <i class="flaticon-navigation-arrow"></i>
-                {{ "donde.address"|trans|raw }}
+                {% translate donde.address %}
             </div>
         </div>
         <div class="map-info-socials"> <a href="#"><i class="fa fa-facebook"></i></a></div>
@@ -51,23 +53,23 @@
 <div class="get">
     <div class="container">
         <div class="row">
-            <h2 class="section-title">{{ "donde.how_to_come"|trans }}</h2>
+            <h2 class="section-title">{% translate donde.how_to_come %}</h2>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 get-item">
                 <div class="get-item-icon"> <i class="fa fa-subway"></i> </div>
-                <h4 class="get-item-title">{{ "donde.item_1.title"|trans }}</h4>
+                <h4 class="get-item-title">{% translate donde.item_1.title %}</h4>
                 <p class="get-item-text">
-                    {{ "donde.item_1.text"|trans }}
+                    {% translate donde.item_1.text %}
                 </p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 get-item">
                 <div class="get-item-icon"> <i class="fa fa-train"></i> </div>
-                <h4 class="get-item-title">{{ "donde.item_2.title"|trans }}</h4>
-                <p class="get-item-text">{{ "donde.item_2.text"|trans }}</p>
+                <h4 class="get-item-title">{% translate donde.item_2.title %}</h4>
+                <p class="get-item-text">{% translate donde.item_2.text %}</p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 get-item">
                 <div class="get-item-icon"> <i class="fa fa-bus"></i> </div>
-                <h4 class="get-item-title">{{ "donde.item_3.title"|trans }}</h4>
-                <p class="get-item-text">{{ "donde.item_3.text"|trans }}</p>
+                <h4 class="get-item-title">{% translate donde.item_3.title %}</h4>
+                <p class="get-item-text">{% translate donde.item_3.text %}</p>
             </div>
         </div>
     </div>
@@ -76,7 +78,7 @@
     <div class="container">
     <div class="row">
         <div class="col-lg-offset-2 col-lg-8 col-md-8 col-sm-12 col-xs-12">
-        {% include "includes/cita.html.twig" %}
+        {% include "includes/cita.html" %}
         </div>
     </div>
     </div>

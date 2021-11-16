@@ -1,9 +1,11 @@
 {% extends "base.html" %}
+{% load static %}
+{% load i18n %}
 
 {% block title %}{% translate quienes_somos.menu_page_name %}{% endblock %}
 {% block og_title %}{% translate quienes_somos.og_title %}{% endblock %}
 {% block og_description %}{% translate quienes_somos.og_description %}{% endblock %}
-{% block og_image %}{% static '/images/Matteo_Ricucci_Dentista_Italiano_2.jpg' %}<!--{{ absolute_url(asset('/images/Matteo_Ricucci_Dentista_Italiano_2.jpg')) }}-->{% endblock %}
+{% block og_image %}{% static '/index/images/tretamientos/Matteo_Ricucci_Dentista_Italiano_2.jpg' %}{#{{ absolute_url(asset('/images/Matteo_Ricucci_Dentista_Italiano_2.jpg')) }}#}{% endblock %}
 
 {% block meta_description %}{% translate quienes_somos.meta_description %}{% endblock %}
 {% block meta_keywords %}{% translate quienes_somos.meta_keywords %}{% endblock %}
@@ -33,7 +35,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="doctor-info">
-                        <div class="doctor-info-image"> <img src="{% static '/images/Matteo_Ricucci_Dentista_Italiano_2.jpg' %}" alt="{% translate quienes_somos.alt_img_doctor %}" /> </div>
+                        <div class="doctor-info-image"> <img src="{% static '/index/images/Matteo_Ricucci_Dentista_Italiano_2.jpg' %}" alt="{% translate quienes_somos.alt_img_doctor %}" /> </div>
                         <div class="doctor-info-name"> {% translate quienes_somos.info %}</div>
                     </div>
                 </div>
