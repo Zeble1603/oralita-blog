@@ -20,5 +20,8 @@ def homeview(request):
     }
     return render(request, 'base.html', context=context)
 
+def quien(request):
+    return render(request, 'quienes_somos.html', context={'quienes_somos': QuienesSomos,})
+
 
 

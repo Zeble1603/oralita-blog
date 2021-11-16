@@ -1,0 +1,46 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ "primera-visita.title"|trans }}{% endblock %}
+{% block og_title %}{{ "primera-visita.og_title"|trans }}{% endblock %}
+{% block og_description %}{{ "primera-visita.og_description"|trans }}{% endblock %}
+
+{% block meta_description %}{{ "primera-visita.meta_description"|trans }}{% endblock %}
+{% block meta_keywords %}{{ "primera-visita.meta_keywords"|trans }}{% endblock %}
+
+{% block body %}
+    <div class="page-title page-title-doctor bg-pattern" data-bgcolor="2BAAA1">
+        <div class="page-title-overlay">
+            <div class="container">
+                <h1>{{ "primera-visita.title"|trans }}</h1>
+                <h3>{{ "primera-visita.sub_title"|trans }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-home"><a href="{{ path('homepage') }}"><i class="fa fa-home"></i></a></li>
+                    <li>{{ "primera-visita.title"|trans }}</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="container especialidade">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="especialidade-image left col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: 10px">
+                    <img src="{{ asset('/images/tretamientos/RX.jpg') }}" alt="">
+                </div>
+                <div>
+                    {{ "primera-visita.text"|trans|raw }}
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                {% include "includes/cita.html.twig" %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

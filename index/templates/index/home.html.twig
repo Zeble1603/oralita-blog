@@ -1,0 +1,148 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<!-- =========================
+     HEADER SLIDER
+============================== -->
+<div id="slider" class="slider">
+    <div class="sp-slides">
+
+        <!-- HEADER SLIDER ITEM -->
+        <div class="sp-slide">
+            <img class="sp-image"
+                 src="{{ asset('/images/Clinica_Dental_Gracia_1.jpg') }}"
+                 alt="{{ "homepage.slider_1.alt_img"|trans }}"
+                 data-src="{{ asset('/images/Clinica_Dental_Gracia_1.jpg') }}" />
+            <div class="container">
+                <h1 class="sp-layer slider-title"
+                    data-position="leftCenter" data-horizontal="15" data-vertical="-230"
+                    data-show-transition="left" data-hide-transition="left"
+                    data-show-delay="200" data-hide-delay="200">
+                    {{ "homepage.slider_1.text"|trans }}
+                </h1>
+            </div>
+        </div>
+
+        <!-- HEADER SLIDER ITEM -->
+        <div class="sp-slide">
+            <img class="sp-image"
+                 src="{{ asset('/images/Clinica_Dental_Gracia_4.jpg') }}"
+                 alt="{{ "homepage.slider_2.alt_img"|trans }}"
+                 data-src="{{ asset('/images/Clinica_Dental_Gracia_4.jpg') }}" />
+            <div class="container">
+                <h2 class="sp-layer slider-subtitle"
+                    data-position="leftCenter" data-horizontal="15" data-vertical="-370"
+                    data-show-transition="left" data-hide-transition="left"
+                    data-show-delay="400" data-hide-delay="400">
+                    {{ "homepage.slider_2.text"|trans }}
+                </h2>
+            </div>
+        </div>
+
+        <!-- HEADER SLIDER ITEM -->
+        <div class="sp-slide">
+            <img class="sp-image"
+                 src="{{ asset('/images/Clinica_Dental_Gracia_3.jpg') }}"
+                 alt="{{ "homepage.slider_3.alt_img"|trans }}"
+                 data-src="{{ asset('/images/Clinica_Dental_Gracia_3.jpg') }}" />
+                <div class="container">{{ "homepage.slider_3.text"|trans }}</div>
+            </div>
+            <div class="sp-slide">
+                <img class="sp-image"
+                     src="{{ asset('/images/home_02.jpg') }}"
+                     alt="{{ "homepage.slider_4.alt_img"|trans }}"
+                     data-src="{{ asset('/images/home_02.jpg') }}" />
+            <div class="container">{{ "homepage.slider_4.text"|trans }}</div>
+        </div>
+        <div class="sp-slide">
+            <img class="sp-image"
+                 src="{{ asset('/images/Clinica_Dental_Gracia_5.jpg') }}"
+                 alt="{{ "homepage.slider_5.alt_img"|trans }}"
+                 data-src="{{ asset('/images/Clinica_Dental_Gracia_5.jpg') }}" />
+                <div class="container">{{ "homepage.slider_5.text"|trans }}</div>
+            </div>
+        </div>
+    </div>
+    <!-- =========================
+         END HEADER SLIDER
+    ============================== -->
+
+    <!-- =========================
+         SERVICES
+    ============================== -->
+    <div class="services" id="services">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- SERVICES ITEM -->
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 service bg-primary-2">
+                    <div class="service-icon"> <i class="flaticon-dental-chair"></i> </div>
+                    <div class="service-title">
+                        <h3>{{ "homepage.services.item_1.title"|trans }}</h3>
+                    </div>
+                    <div class="service-text">
+                        {{ "homepage.services.item_1.text"|trans }}
+                    </div>
+                </div>
+
+                <!-- SERVICES ITEM -->
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 service bg-child-2">
+                    <div class="service-icon"> <i class="flaticon-medical-2"></i> </div>
+                    <div class="service-title">
+                        <h3>{{ "homepage.services.item_2.title"|trans }}</h3>
+                    </div>
+                    <div class="service-text">
+                        {{ "homepage.services.item_2.text"|trans }}
+                    </div>
+                </div>
+
+                <!-- SERVICES ITEM -->
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 service bg-child-3">
+                    <div class="service-icon"> <i class="flaticon-medical-1"></i> </div>
+                    <div class="service-title">
+                        <h3>{{ "homepage.services.item_3.title"|trans }}</h3>
+                    </div>
+                    <div class="service-text">
+                        {{ "homepage.services.item_3.text"|trans|raw }}
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 service bg-child-4">
+                    <div class="service-icon">€</div>
+                    <div class="service-title">
+                        <h3>{{ "homepage.services.item_4.title"|trans }}</h3>
+                    </div>
+                    <div class="service-text">
+                        {{ "homepage.services.item_4.text"|trans|raw }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =========================
+         END SERVICES
+    ============================== -->
+
+    <!-- =========================
+         ABOUT
+    ============================== -->
+    <div class="about">
+        <div class="container">
+            <div class="row">
+
+                <!-- ABOUT TEXT -->
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 about-text" style="padding: 60px 15px 55px;">
+                    <h2 class="section-title">
+                        <span class="bold700">{{ "homepage.services.about.title"|trans }}</span></h2>
+                    <h3 style="color: lightskyblue">{{ "homepage.services.about.sub_title"|trans }}</h3>
+                    <p>
+                        {{ "homepage.services.about.text"|trans }}
+                    </p>
+                    {{ "homepage.services.about.list"|trans|raw }}
+                </div>
+
+                <!-- ABOUT BACKGROUND -->
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 about-bg"> </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

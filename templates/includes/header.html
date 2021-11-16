@@ -100,9 +100,9 @@
                             )) }} -->
                         </ul>
                     </li>
-                    {#{% url 'index:quienes-somos' as quienessomos %}#}
-                    <li class="{#{% if request.path == quienessomos %}#}active{#{% endif %}#}">
-                        <a href="{#{{ quienessomos }}#}">{% translate quienes_somos.menu_page_name|capfirst %}</a>
+                    {% url 'index:quienes-somos' as quienessomos %}
+                    <li class="{% if request.path == quienessomos %}active{% endif %}">
+                        <a href="{{ quienessomos }}">{% translate quienes_somos.menu_page_name|capfirst %}</a>
                     </li>
                     {#{% url 'index:donde' as donde %}#}
                     <li class="{#{% if request.path == donde %}active{% endif %}#}">

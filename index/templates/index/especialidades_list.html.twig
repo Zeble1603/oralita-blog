@@ -1,0 +1,46 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ "especialidades.title"|trans }}{% endblock %}
+{% block og_title %}{{ "especialidades.og_title"|trans }}{% endblock %}
+{% block og_description %}{{ "especialidades.meta_description"|trans }}{% endblock %}
+{% block meta_description %}{{ "especialidades.meta_description"|trans }}{% endblock %}
+
+{% block body %}
+    <div class="page-title page-title-doctor bg-pattern" data-bgcolor="2BAAA1">
+        <div class="page-title-overlay">
+            <div class="container">
+                <h1>{{ "especialidades.title"|trans }}</h1>
+                <h3>{{ "especialidades.meta_description"|trans }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-home"><a href="{{ path('homepage') }}"><i class="fa fa-home"></i></a></li>
+                    <li class="active">{{ "especialidades.title"|trans }}</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="doctor">
+
+    <div class="container">
+    <div class="row">
+        {% for especialidade in especialidades %}
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="{{ asset('images/tretamientos/' ~ especialidade.image) }}" alt="{{ especialidade.title }}">
+                    <div class="caption">
+                        <h3>{{ especialidade.title|upper }}</h3>
+                        <p class="text-center"><a  style="width: 50%" href="{{ path('especialidades', {'code': especialidade.code}) }}" class="btn btn-primary" role="button">Ver</a></p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+    </div>
+
+{% endblock %}
