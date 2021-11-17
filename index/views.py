@@ -3,12 +3,10 @@ from django.shortcuts import render
 from translations.es.messages import *
 from translations.es.especialidades import *
 
+# Context used in the different views for index app
 
-# Create your views here.
+index_context = {
 
-def homeview(request):
-    
-    context = {
         'default':Default,
         'horario': Horario,
         'form':Form,
@@ -17,25 +15,27 @@ def homeview(request):
         'especialidades':Especialidades,
         'quienes_somos': QuienesSomos,
         'donde':Donde,
-        'primera_visita':PrimeraVisita,  
+        'primera':PrimeraVisita,
         'horario':Horario,  
+        'contact':Contact,
+
     }
-    return render(request, 'home.html', context=context)
+
+
+# Index views 
+
+def homeview(request):
+    return render(request, 'home.html', context=index_context)
 
 def especialidades(request):
-    context ={
-        'especialidade':Especialidades,
-        'global':Global,
-    }
-    return render(request, 'especialidades.html', context=context)
+    return render(request, 'especialidades.html', context=index_context)
 
 def quien(request):
-    return render(request, 'quienes_somos.html', context={'quienes_somos': QuienesSomos,})
+    return render(request, 'quienes_somos.html', context=index_context)
 
 
 def donde(request):
-    context = {
-        'donde':Donde,
-        'global':Global,
-    }
-    return render(request, 'donde.html', context=context)
+    return render(request, 'donde.html', context=index_context)
+
+def primera(request):
+    return render(request, 'primera_visita.html', context=index_context)

@@ -44,7 +44,7 @@
                 </span>
             </div>
             <div class="map-info-location"> <i class="flaticon-navigation-arrow"></i>
-                {% translate donde.address %}
+                {% translate donde.address|safe %}
             </div>
         </div>
         <div class="map-info-socials"> <a href="#"><i class="fa fa-facebook"></i></a></div>
@@ -58,18 +58,18 @@
                 <div class="get-item-icon"> <i class="fa fa-subway"></i> </div>
                 <h4 class="get-item-title">{% translate donde.item_1.title %}</h4>
                 <p class="get-item-text">
-                    {% translate donde.item_1.text %}
+                    {% translate donde.item_1.text|safe %}
                 </p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 get-item">
                 <div class="get-item-icon"> <i class="fa fa-train"></i> </div>
                 <h4 class="get-item-title">{% translate donde.item_2.title %}</h4>
-                <p class="get-item-text">{% translate donde.item_2.text %}</p>
+                <p class="get-item-text">{% translate donde.item_2.text|safe %}</p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 get-item">
                 <div class="get-item-icon"> <i class="fa fa-bus"></i> </div>
                 <h4 class="get-item-title">{% translate donde.item_3.title %}</h4>
-                <p class="get-item-text">{% translate donde.item_3.text %}</p>
+                <p class="get-item-text">{% translate donde.item_3.text|safe %}</p>
             </div>
         </div>
     </div>

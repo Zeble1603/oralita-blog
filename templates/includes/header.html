@@ -104,13 +104,13 @@
                     <li class="{% if request.path == quien %}active{% endif %}">
                         <a href="{{ quien }}">{% translate quienes_somos.menu_page_name|capfirst %}</a>
                     </li>
-                    <!--{% url 'index:donde' as donde %}
-                    <li class="{% if request.path == donde %}active{% endif %}">
-                        <a href="{{ donde }}">{% translate donde.menu_page_name|capfirst %}</a>
-                    </li>-->
-                    {#{% url 'index:primera_visita' as primera_visita %}#}
-                    <li class="{#{% if request.path == primera_visita %}active{% endif %}#}">
-                        <a href="{#{{ primera_visita }}#}">{% translate primera_visita.menu_page_name|capfirst %}</a>
+                    {% url 'index:donde' as dondesta %}
+                    <li class="{% if request.path == dondesta %}active{% endif %}">
+                        <a href="{{ dondesta }}">{% translate donde.menu_page_name|capfirst %}</a>
+                    </li>
+                    {% url 'index:primera_visita' as primera_visita %}
+                    <li class="{% if request.path == primera_visita %}active{% endif %}">
+                        <a href="{{ primera_visita }}">{% translate primera.menu_page_name|capfirst %}</a>
                     </li>
                     {#{% url 'index:contact' as contact %}#}
                     <li class="{#{% if request.path == contact %}active{% endif %}#}">
