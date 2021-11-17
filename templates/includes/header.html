@@ -1,5 +1,7 @@
 {% load i18n %}
 {% load static %}
+{% load index_tags %}
+
 <div class="preloader" id="preloader"> <img src="{% static 'index/images/preloader.gif' %}" alt="" /> </div>
 <!-- =========================
      TOP BAR
@@ -92,12 +94,10 @@
                         <a href="{{ home }}">{% translate homepage.menu_page_name|capfirst%}</a>
                     </li>
                     <!--                    <li><a href="/about.php">NOSOTROS</a></li>-->
-                    <li class="dropdown"> <a data-toggle="dropdown disabled" href="{#{% url 'index:especialidades' %}#}">
+                    <li class="dropdown"> <a data-toggle="dropdown disabled" href="{% url 'index:especialidades' %}">
                             {% translate especialidades.menu_page_name|capfirst %}</a>
-                        <ul class="dropdown-menu with-bg" role="menu" style="padding-right: 325px;">
-                            <!--{{ render(controller(
-                                'App\\Controller\\PagesController::especialidadesListMenu'
-                            )) }}-->
+                        <ul class="dropdown-menu with-bg" role="menu" style="padding-right: 325px; background: {% static 'index/images/general.jpg' %};">
+                            {% gen_espe %}
                         </ul>
                     </li>
                     {% url 'index:quienes-somos' as quien %}

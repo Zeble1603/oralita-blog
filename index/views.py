@@ -1,5 +1,8 @@
 from django.shortcuts import render
-from translations.es.messages import Default, Donde, Especialidades, Homepage,Horario,Form,Global, PrimeraVisita, QuienesSomos
+
+from translations.es.messages import *
+from translations.es.especialidades import *
+
 
 # Create your views here.
 
@@ -19,6 +22,12 @@ def homeview(request):
     }
     return render(request, 'home.html', context=context)
 
+def especialidades(request):
+    context ={
+        'especialidade':Especialidades,
+        'global':Global,
+    }
+    return render(request, 'especialidades.html', context=context)
 
 def quien(request):
     return render(request, 'quienes_somos.html', context={'quienes_somos': QuienesSomos,})
