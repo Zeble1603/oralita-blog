@@ -3,6 +3,7 @@ from django.utils.translation import gettext_lazy as _
 
 class Odontologia:
     title = _("Odontologia general")
+    link = "Odontologia"
     image = "odontologia_general.jpg"
     description = _("Como tratar caries y cuidar la salud oral")
     alt_img = _("alt_img")
@@ -12,9 +13,11 @@ class Odontologia:
         <p>La caries es un proceso de desmineralización del tejido dental que, si no tratada a tiempo, puede llevar a la perdida del diente. En una fase inicial no duele y por ello el protocolo de prevención en Oralitá prevé un control anual en el cual se realizan pruebas y radiografías para diagnosticar y tratar las caries lo antes posible. Este tratamiento, mas conocido como empaste, consiste en remover la parte afectada y sustituirla con resinas de ultimas generación que la mayoría de las veces solucionan el problema de forma definitiva.</p>
 
         <p>Cuando una caries provoca dolor es porque ha llegado a aquella parte del diente donde están nervios y vasos sanguíneos: la pulpa. El tratamiento correspondiente a este caso es la endodoncia, cuya finalidad es extirpar este tejido, dejando el diente prácticamente “sin vida” y aumentando mucho las posibilidades de perderlo a lo largo de nuestra vida.</p>""")
+    
 
 class Implantologia:
     title = _("Implantología")
+    link = "Implantologia"
     description = _("Implantes garantizados de por vida.")
     image = "implantologia.jpg"
     alt_img = _("alt_img")
@@ -26,6 +29,7 @@ class Implantologia:
 
 class Ortodoncia:
     title= _("Ortodoncia")
+    link = "Ortodoncia"
     description= _("Invisaling, el sistema más innovador.")
     image = "ortodoncia.jpg"
     alt_img= _("alt_img")
@@ -38,6 +42,7 @@ class Ortodoncia:
 
 class Odontopediatria:
     title= _("Odontopediatría")
+    link = "Odontopediatria"
     description= _("Tratar antes es tratar menos.")
     image = "odontopediatria.jpg"
     alt_img= _("alt_img")
@@ -61,6 +66,7 @@ class Odontopediatria:
 
 class Protesis:
     title= _("Prótesis")
+    link= "Protesis"
     description= _("Vuelve a sonreír.")
     image = "protesis.jpg"
     alt_img= _("alt_img")

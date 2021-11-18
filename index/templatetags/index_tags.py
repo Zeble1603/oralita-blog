@@ -13,16 +13,16 @@ def gen_espe():
     
     special = {
 
-        Odontologia.title : "{% url index:odontologia %}",
-        Implantologia.title: "{% url index:implantologia %}",
-        Ortodoncia.title: "{% url index:ortodoncia %}",
-        Odontopediatria.title: "{% url index:odontopediatria %}",
-        Protesis.title: "{% url index:protesis %}",
+        Odontologia.title : Odontologia.link,
+        Implantologia.title: Implantologia.link,
+        Ortodoncia.title: Ortodoncia.link,
+        Odontopediatria.title: Odontopediatria.link,
+        Protesis.title: Protesis.link,
 
     }
 
     html_chunk = ""
     for key,val in special.items():
-        html_chunk += format_html("<li><a href='{}'>{}</a></li>",mark_safe(val),mark_safe(key))
+        html_chunk += format_html("<li><a href='{% url 'index:especialidad_detail' name={} %}'>{}</a></li>",mark_safe(val),mark_safe(key))
 
     return mark_safe(html_chunk)

@@ -36,7 +36,7 @@
                     <img src="{% static 'index/images/tretamientos/'|add:especialidad.image %}" alt="{{ especialidad.title }}">
                     <div class="caption">
                         <h3>{{ especialidad.title|upper }}</h3>
-                        <p class="text-center"><a  style="width: 50%" href="{#{{ path('especialidades', {'code': especialidade.code}) }}#}" class="btn btn-primary" role="button">Ver</a></p>
+                        <p class="text-center"><a  style="width: 50%" href="{% url 'index:especialidad_detail' name=especialidad.link %}" class="btn btn-primary" role="button">Ver</a></p>
                     </div>
                 </div>
             </div>
