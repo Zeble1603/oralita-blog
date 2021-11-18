@@ -112,9 +112,9 @@
                     <li class="{% if request.path == primera_visita %}active{% endif %}">
                         <a href="{{ primera_visita }}">{% translate primera.menu_page_name|capfirst %}</a>
                     </li>
-                    {#{% url 'index:contact' as contact %}#}
-                    <li class="{#{% if request.path == contact %}active{% endif %}#}">
-                        <a href="{#{{ contact }}#}">{% translate contact.menu_page_name|capfirst %}</a>
+                    {% url 'index:contact' as contacto %}
+                    <li class="{% if request.path == contacto %}active{% endif %}">
+                        <a href="{{ contacto }}">{% translate contact.menu_page_name|capfirst %}</a>
                     </li>
 
                 </ul>

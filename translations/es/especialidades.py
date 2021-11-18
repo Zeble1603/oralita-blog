@@ -3,6 +3,7 @@ from django.utils.translation import gettext_lazy as _
 
 class Odontologia:
     title = _("Odontologia general")
+    image = "odontologia_general.jpg"
     description = _("Como tratar caries y cuidar la salud oral")
     alt_img = _("alt_img")
     text = _("""
@@ -15,6 +16,7 @@ class Odontologia:
 class Implantologia:
     title = _("Implantología")
     description = _("Implantes garantizados de por vida.")
+    image = "implantologia.jpg"
     alt_img = _("alt_img")
     text = _("""
         <p>La implantología es aquella especialidad que nos permite recolocar los dientes perdidos mediante unas raíces artificiales insertadas en el hueso, los implantes dentales. Dependiendo de la razón por la cual se ha perdido (o se va a perder) el diente, la tipología de tratamiento puede variar; existen diferentes técnicas, desde la más convencional hasta la más innovadora que permite realizar todo el tratamiento en un día.</p>
@@ -25,6 +27,7 @@ class Implantologia:
 class Ortodoncia:
     title= _("Ortodoncia")
     description= _("Invisaling, el sistema más innovador.")
+    image = "ortodoncia.jpg"
     alt_img= _("alt_img")
     text = _("""
         <p>Es la especialidad que se ocupa de corregir maloclusiones, es decir aquellas patologías donde los dientes superiores contactan de forma equivocada con los dientes inferiores. La presencia de dientes desalineados, además de conllevar problemas masticatorios y alterar la estética de nuestra sonrisa, aumenta el riesgo de caries.</p>
@@ -36,6 +39,7 @@ class Ortodoncia:
 class Odontopediatria:
     title= _("Odontopediatría")
     description= _("Tratar antes es tratar menos.")
+    image = "odontopediatria.jpg"
     alt_img= _("alt_img")
     text= _("""
         <p>En Oralitá niños y niñas son pacientes que merecen atención especial. En ellos, aun más, vale el principio de diagnostico preventivo, para la corrección temprana de aquellos problemas que podrían causar patologías en el futuro. Sobre todo es importante sensibilizar a los pequeños, desde muy pronto, a llevar una correcta higiene oral y unos hábitos alimentarios sanos.</p>
@@ -58,6 +62,7 @@ class Odontopediatria:
 class Protesis:
     title= _("Prótesis")
     description= _("Vuelve a sonreír.")
+    image = "protesis.jpg"
     alt_img= _("alt_img")
     text= _("""
         <p>El requisito primario de cada prótesis es ejercer una correcta función masticatoria y devolver estética a nuestra sonrisa. En Oralitá, solemos sugerir prótesis fijas: con ellas obtenemos resultados más duraderos, más funcionales, más estéticos y muchos más prácticos para la vida cotidiana. </p>

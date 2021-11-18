@@ -18,6 +18,8 @@ index_context = {
         'primera':PrimeraVisita,
         'horario':Horario,  
         'contact':Contact,
+        'thanks': Thanks,
+        'list_especialidades':[Odontologia,Implantologia,Ortodoncia,Odontopediatria,Protesis,]
 
     }
 
@@ -27,8 +29,10 @@ index_context = {
 def homeview(request):
     return render(request, 'home.html', context=index_context)
 
+
 def especialidades(request):
-    return render(request, 'especialidades.html', context=index_context)
+    return render(request, 'especialidades_list.html', context=index_context)
+
 
 def quien(request):
     return render(request, 'quienes_somos.html', context=index_context)
@@ -37,5 +41,10 @@ def quien(request):
 def donde(request):
     return render(request, 'donde.html', context=index_context)
 
+
 def primera(request):
+    return render(request, 'primera_visita.html', context=index_context)
+
+
+def contact(request):
     return render(request, 'primera_visita.html', context=index_context)

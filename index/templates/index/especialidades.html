@@ -2,10 +2,10 @@
 {% load i18n %}
 {% load static %}
 
-{% block title %}{{ especialidade.title }} {% endblock %}
-{% block meta_description %}{{ especialidade.description }}{% endblock %}
-{% block og_title %}{% translate global.site_name %} - {{ especialidade.title }}{% endblock %}
-{% block og_description %}{{ especialidade.description }}{% endblock %}
+{% block title %}{{ especialidades.title }} {% endblock %}
+{% block meta_description %}{{ especialidades.description }}{% endblock %}
+{% block og_title %}{% translate global.site_name %} - {{ especialidades.title }}{% endblock %}
+{% block og_description %}{{ especialidades.description }}{% endblock %}
 {% block og_type %}article{% endblock %}
 {% block og_image %}{#{{ absolute_url(asset('images/tretamientos/' ~ especialidade.image)) }}#}{% endblock %}
 
@@ -13,8 +13,8 @@
     <div class="page-title page-title-doctor bg-pattern" data-bgcolor="2BAAA1">
         <div class="page-title-overlay">
             <div class="container">
-                <h1>{{ especialidade.title }}</h1>
-                <h3>{{ especialidade.meta_description }}</h3>
+                <h1>{{ especialidades.title }}</h1>
+                <h3>{{ especialidades.meta_description }}</h3>
             </div>
         </div>
     </div>
@@ -23,8 +23,8 @@
             <div class="row">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-home"><a href="{% url 'index:home' %}"><i class="fa fa-home"></i></a></li>
-                    <li><a href="{#{{ path('especialidades_list') }}#}">{% translate especialidade.menu_page_name %}</a></li>
-                    <li class="active">{{ especialidade.title }}</li>
+                    <li><a href="{#{{ path('especialidades_list') }}#}">{% translate especialidades.menu_page_name %}</a></li>
+                    <li class="active">{{ especialidades.title }}</li>
                 </ol>
             </div>
         </div>
@@ -33,15 +33,15 @@
     <div class="container especialidade">
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                <div class="especialidade-image left col-lg-6 col-md-6 col-sm-5 col-xs-12"> <img src="{#{{ asset('images/tretamientos/'  ~ especialidade.image)#}" alt="{{ especialidade.title }}">
+                <div class="especialidade-image left col-lg-6 col-md-6 col-sm-5 col-xs-12"> {#<img src="{% static 'index/images/tretamientos/'|add:especialidade.image %}" alt="{{ especialidade.title }}">#}
                     <div class="blog-item-text-image-info">
-                        {% if especialidade.descriptionPhoto != "" %}
-                            <h4 class="blog-item-text-image-title">{{ especialidade.descriptionPhoto }}</h4>
+                        {% if especialidades.descriptionPhoto|length > 0 %}
+                            <h4 class="blog-item-text-image-title">{{ especialidades.descriptionPhoto }}</h4>
                         {% endif %}
                         {#<p class="blog-item-text-image-desc">Consectetur adipisicing elit, sed do eiusmod tempor incididunt labore.</p>#}
                     </div>
                 </div>
-                {{ especialidade.text|safe}}
+                {{ especialidades.text|safe}}
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 {% include "includes/cita.html" %}
