@@ -14,13 +14,16 @@ class Post(models.Model):
     titulo = models.CharField(max_length=200)
     texto = models.TextField()
     resumen = models.CharField(max_length=200)
-    fecha_publicacion = models.DateTimeField(blank=True,null=True)
-    tags = models.ManyToManyField(Tag)
+    fecha = models.DateTimeField(blank=True,null=True,editable=False)
+    tags = models.ManyToManyField(Tag,blank=True)
     publicado = models.BooleanField(default=False)
+    if publicado == True:
+        fecha = timezone.now()
+
     
 
     class Meta:
-        ordering = ['fecha_publicacion']
+        ordering = ['fecha']
 
     def __str__(self):
         return self.titulo
