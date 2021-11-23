@@ -15,7 +15,9 @@ class Post(models.Model):
     texto = models.TextField()
     resumen = models.CharField(max_length=200)
     fecha_publicacion = models.DateTimeField(blank=True,null=True)
-    tags = models.ManyToManyField(Tag,null=True)
+    tags = models.ManyToManyField(Tag)
+    publicado = models.BooleanField(default=False)
+    
 
     class Meta:
         ordering = ['fecha_publicacion']
