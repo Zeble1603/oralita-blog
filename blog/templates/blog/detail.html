@@ -7,9 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    {% for articulo in articulo_list %}
-    <a href={% url 'blog:detail' pk=articulo.pk %}><h1>{{articulo.titulo}}</h1></a>
+    <h1>{{articulo.titulo}}</h1>
     <p>{{articulo.fecha}}</p>
-    {% endfor %}
+    <p>{{articulo.resumen}}</p>
+    <p>{{articulo.texto|safe}}</p>
+    
 </body>
 </html>
