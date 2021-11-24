@@ -22,6 +22,7 @@ environ.Env.read_env()
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = BASE_DIR / 'templates'
 INDEX_DIR = BASE_DIR / 'index/templates/index'
+BLOG_DIR = BASE_DIR / 'blog/templates/blog'
 
 
 
@@ -67,7 +68,7 @@ ROOT_URLCONF = 'oralita.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR,INDEX_DIR],
+        'DIRS': [TEMPLATES_DIR,INDEX_DIR,BLOG_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -10,27 +10,22 @@ class Tag(models.Model):
         return self.nombre
 
 
-class Post(models.Model):
+class Articulo(models.Model):
     titulo = models.CharField(max_length=200)
     texto = models.TextField()
     resumen = models.CharField(max_length=200)
-    fecha = models.DateTimeField(blank=True,null=True,editable=False)
+    fecha = models.DateField(blank=True,null=True)
     tags = models.ManyToManyField(Tag,blank=True)
     publicado = models.BooleanField(default=False)
-    if publicado == True:
-        fecha = timezone.now()
-
-    
-
-    class Meta:
-        ordering = ['fecha']
 
     def __str__(self):
         return self.titulo
 
     def publicar(self):
-        self.fecha_publicacion = timezone.now()
+        self.publicado = True
+        self.fecha = timezone.now()
         self.save()
+        
 
     
 
