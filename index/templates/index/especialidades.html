@@ -2,7 +2,7 @@
 {% load i18n %}
 {% load static %}
 
-{% block title %}{{ especialidad.title }} {% endblock %}
+{% block title %}{{ especialidad.title }}{% endblock %}
 {% block meta_description %}{{ especialidad.description }}{% endblock %}
 {% block og_title %}{% translate global.site_name %} - {{ especialidad.title }}{% endblock %}
 {% block og_description %}{{ especialidad.description }}{% endblock %}
@@ -14,7 +14,7 @@
         <div class="page-title-overlay">
             <div class="container">
                 <h1>{{ especialidad.title }}</h1>
-                <h3>{{ especialidad.meta_description }}</h3>
+                <h3>{{ especialidad.description }}</h3>
             </div>
         </div>
     </div>
