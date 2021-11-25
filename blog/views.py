@@ -21,5 +21,5 @@ def articulos_filtrados(request,categoria):
 
 class PostDetailView(DetailView):
     model = Articulo
-    template_name = "detail.html"
+    template_name = "articulo_detail.html"
     extra_context = index_context

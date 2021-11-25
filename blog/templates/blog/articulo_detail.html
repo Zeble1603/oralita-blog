@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% translate primera.title %}{% endblock %}
+{% block og_title %}{% translate primera.og_title %}{% endblock %}
+{% block og_description %}{% translate primera.og_description %}{% endblock %}
+
+{% block meta_description %}{% translate primera.meta_description %}{% endblock %}
+{% block meta_keywords %}{% translate primera.meta_keywords %}{% endblock %}
+
+{% block body %}
+    <div class="page-title page-title-doctor bg-pattern" data-bgcolor="2BAAA1">
+        <div class="page-title-overlay">
+            <div class="container">
+                <h1>{{articulo.titulo}}</h1>
+                <h3>{{articulo.resumen}}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-home"><a href="{% url 'index:home' %}"><i class="fa fa-home"></i></a></li>
+                    <li>{% translate primera.title %}</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="container especialidade">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="especialidade-image left col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin: 10px">
+                    <img src="{{articulo.photo.url}}" alt="">
+                </div>
+                <div>
+                    {{articulo.texto|safe}}
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                {% include "includes/cita.html" %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
