@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = BASE_DIR / 'templates'
 INDEX_DIR = BASE_DIR / 'index/templates/index'
 BLOG_DIR = BASE_DIR / 'blog/templates/blog'
-
+CKEDITOR_UPLOAD_PATH = "uploads/" 
 
 
 
@@ -50,7 +50,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'index',
     'blog',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -140,6 +144,13 @@ LOCALE_PATHS = [BASE_DIR / 'locale']
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = BASE_DIR / 'media'
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
