@@ -7,7 +7,7 @@ from .models import *
 
 class PostListView(ListView):
     model = Articulo
-    template_name = "list.html"
+    template_name = "list.html"    
 
 class PostDetailView(DetailView):
     model = Articulo

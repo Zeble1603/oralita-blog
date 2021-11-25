@@ -14,13 +14,12 @@ class Tag(models.Model):
 
 class Articulo(models.Model):
     titulo = models.CharField(max_length=200)
+    photo = models.ImageField(blank=True,null=True)
     texto = RichTextUploadingField(blank=True, null=True)
     resumen = models.CharField(max_length=200)
     fecha = models.DateField(blank=True,null=True)
     tags = models.ManyToManyField(Tag,blank=True)
     publicado = models.BooleanField(default=False)
-
-    #slug = models.SlugField(default='')
 
     def __str__(self):
         return self.titulo
