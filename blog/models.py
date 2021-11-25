@@ -14,7 +14,7 @@ class Tag(models.Model):
 
 class Articulo(models.Model):
     titulo = models.CharField(max_length=200)
-    photo = models.ImageField(blank=True,null=True)
+    photo = models.ImageField(blank=True,null=True,upload_to="images")
     texto = RichTextUploadingField(blank=True, null=True)
     resumen = models.CharField(max_length=200)
     fecha = models.DateField(blank=True,null=True)

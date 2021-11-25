@@ -11,8 +11,8 @@
     <div class="page-title page-title-doctor bg-pattern" data-bgcolor="2BAAA1">
         <div class="page-title-overlay">
             <div class="container">
-                <h1>{% translate especialidades.title %}</h1>
-                <h3>{% translate especialidades.meta_description %}</h3>
+                <h1>{{categoria}}</h1>
+                <h3>Description</h3>
             </div>
         </div>
     </div>
@@ -21,7 +21,7 @@
             <div class="row">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-home"><a href="{% url 'index:home' %}"><i class="fa fa-home"></i></a></li>
-                    <li class="active">{% translate especialidades.title %}</li>
+                    <li class="active">Articulos</li>
                 </ol>
             </div>
         </div>
@@ -30,13 +30,13 @@
 
     <div class="container">
     <div class="row">
-        {% for especialidad in list_especialidades %}
+        {% for articulo in articulos_categoria %}
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <img src="{% static 'index/images/tretamientos/'|add:especialidad.image %}" alt="{{ especialidad.title }}">
+                    <img src="{{articulo.photo.url}}" alt="{{ articulo.titulo }}">
                     <div class="caption">
-                        <h3 class="text-center">{{ especialidad.title|upper }}</h3>
-                        <p class="text-center"><a  style="width: 50%" href="{% url 'index:especialidad_detail' name=especialidad.link %}" class="btn btn-primary" role="button">Ver</a></p>
+                        <h3 class="text-center">{{ articulo.titulo }}</h3>
+                        <p class="text-center"><a  style="width: 50%" href="{% url 'blog:detail' pk=articulo.pk %}" class="btn btn-primary" role="button">Ver</a></p>
                     </div>
                 </div>
             </div>
