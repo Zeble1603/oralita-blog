@@ -118,6 +118,10 @@
                     <li class="{% if request.path == contacto %}active{% endif %}">
                         <a href="{{ contacto }}">{% translate contact.menu_page_name|capfirst %}</a>
                     </li>
+                    {% url 'blog:list' as blog %}
+                    <li class="{% if request.path == blog %}active{% endif %}">
+                        <a href="{{ blog }}">Blog</a>
+                    </li>
 
                 </ul>
             </div>
