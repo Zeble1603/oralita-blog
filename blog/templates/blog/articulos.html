@@ -37,7 +37,7 @@
                     <div class="caption">
                         <div class="text-center">
                             <h3>{{ articulo.titulo }}</h3>
-                            <p>{{ articulo.resumen|truncatewords:20 }}</p>
+                            <p>{{ articulo.resumen|truncatewords:30 }}</p>
                             <a  style="width: 50%" href="{% url 'blog:detail' pk=articulo.pk %}" class="btn btn-primary" role="button">Ver</a>
                         </div>
                     </div>

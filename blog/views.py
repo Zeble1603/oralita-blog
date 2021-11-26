@@ -10,8 +10,13 @@ class PostListView(ListView):
     template_name = "articulos.html"    
     extra_context = index_context
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['articulo_list'] = Articulo.objects.filter(publicado=True)
+        return context
+
 def articulos_filtrados(request,categoria):
-    articulos_categoria = Articulo.objects.filter(tags__nombre=categoria)
+    articulos_categoria = Articulo.objects.filter(publicado=True,tags__nombre=categoria)
     context = {
         'articulos_categoria':articulos_categoria,
         'categoria':categoria

@@ -2,11 +2,11 @@
 {% load i18n %}
 {% load static %}
 
-{% block title %}{% translate primera.title %}{% endblock %}
-{% block og_title %}{% translate primera.og_title %}{% endblock %}
-{% block og_description %}{% translate primera.og_description %}{% endblock %}
-
-{% block meta_description %}{% translate primera.meta_description %}{% endblock %}
+{% block title %}{{articulo.titulo}}{% endblock %}
+{% block og_title %}{{articulo.meta_titulo}}{% endblock %}
+{% block og_description %}{{articulo.resumen}}{% endblock %}
+{% block og_image %}{{articulo.photo.url}}{% endblock %}
+{% block meta_description %}{{articulo.meta_description}}{% endblock %}
 {% block meta_keywords %}{% translate primera.meta_keywords %}{% endblock %}
 
 {% block body %}
@@ -14,7 +14,6 @@
         <div class="page-title-overlay">
             <div class="container">
                 <h1>{{articulo.titulo}}</h1>
-                <h3>{{articulo.resumen}}</h3>
             </div>
         </div>
     </div>
