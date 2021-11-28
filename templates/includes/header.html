@@ -97,8 +97,8 @@
                     <li class="dropdown"> <a data-toggle="dropdown disabled" href="{% url 'index:especialidades' %}">
                             {% translate especialidades.menu_page_name|capfirst %}</a>
                         <ul class="dropdown-menu with-bg" role="menu" style="padding-right: 325px; background: {% static 'index/images/general.jpg' %};">
-                            {% for especialidad in list_especialidades %}
-                                <li><a href="{% url 'index:especialidad_detail' name=especialidad.link %}">{{ especialidad.title }}</a></li>
+                            {% for especialidad in especialidad_list %}
+                                <li><a href="{% url 'index:especialidad_detail' slug=especialidad.slug %}">{{ especialidad.title }}</a></li>
                             {% endfor %}
                         </ul>
                     </li>

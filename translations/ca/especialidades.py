@@ -33,7 +33,7 @@ class OrtodonciaCat:
 class OdontopediatriaCat:
     title= _("Odontopediatría")
     link = "OdontopediatriaCat"
-    description= _("Tractar abans és tractar menys..")
+    description= _("Tractar abans és tractar menys...")
     alt_img= _("alt_img")
     text= _("""
         <p>En Oralitá nens i nenes són pacients que mereixen atenció especial. En ells, encara més, val el principi de diagnòstic preventiu, per la correcció primerenca d'aquells problemes que podrien causar patologies en el futur. Sobretot és important sensibilitzar els petits, des de molt aviat, a portar una correcta higiene oral i uns hàbits alimentaris sans..</p>
