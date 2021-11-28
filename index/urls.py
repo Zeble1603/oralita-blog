@@ -30,5 +30,4 @@ urlpatterns = [
     path(_('donde-esta-nuestra-clinica-dental'),views.donde,name='donde'),
     path(_('primera-visita'),views.primera,name='primera_visita'),
     path(_('contacto'),views.contact, name='contact'),
-    
 ]

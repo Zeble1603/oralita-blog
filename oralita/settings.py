@@ -196,12 +196,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-LANGUAGES = (
+LANGUAGES = [
     ('es', 'Spanish'),
     ('ca', 'Catalan'),
-)
+]
 
-LOCALE_PATHS = [BASE_DIR / 'locale']
+LOCALE_PATHS = [BASE_DIR / 'locale',]
 
 
 # Static files (CSS, JavaScript, Images)
