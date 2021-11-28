@@ -2,6 +2,7 @@ from django.utils.translation import gettext_lazy as _
 
 class OdontologiaCat:
     title = _("Odontologia general")
+    link = "OdontologiaCat"
     description = _("Com tractar càries i tenir cura de la salut oral")
     alt_img = _("alt_img")
     text = _("""<p>L'odontologia general s'encarrega de solucionar els problemes primaris que sorgeixen a nivell de la cavitat bucal.  La patologia més freqüentment diagnosticada és la <strong>CÀRIES DENTAL</strong> i les formes de tractar-la varien segons la mida de la mateixa.</p>
@@ -12,6 +13,7 @@ class OdontologiaCat:
 
 class ImplantologiaCat:
     title = _("Implantología")
+    link = "ImplantologiaCat"
     description = _("Implants garantits de per vida.")
     alt_img = _("alt_img")
     text = _("""<p>L'implantologia és aquella especialitat que ens permet recol·locar les dents perdudes mitjançant unes arrels artificials inserides en l'os, els implants dentals. Depenent de la raó per la qual s'ha perdut (o es va a perdre) la dent, la tipologia de tractament pot variar; existeixen diferents tècniques, des de la més convencional fins a la més innovadora que permet realitzar tot el tractament en un dia.</p>
@@ -20,6 +22,7 @@ class ImplantologiaCat:
 
 class OrtodonciaCat:
     title = _("Ortodòncia")
+    link = "OrtodonciaCat"
     description = _("Invisaling, el sistema més innovador.")
     alt_img = _("alt_img")
     text = _("""<p>És l'especialitat que s'ocupa de corretgir maloclusions, és a dir aquelles patologies on les dents superiors contacten de forma equivocada amb les dents inferiors. La presència de dents desalineats, a més de comportar problemes masticatorios i alterar l'estètica del nostre somriure, augmenta el risc de càries.</p>
@@ -29,6 +32,7 @@ class OrtodonciaCat:
 
 class OdontopediatriaCat:
     title= _("Odontopediatría")
+    link = "OdontopediatriaCat"
     description= _("Tractar abans és tractar menys..")
     alt_img= _("alt_img")
     text= _("""
@@ -51,6 +55,7 @@ class OdontopediatriaCat:
 
 class ProtesisCat:
     title= _("Pròtesis")
+    link="ProtesisCat"
     description= _("Torna a somriure.")
     alt_img= _("alt_img")
     text= _("""

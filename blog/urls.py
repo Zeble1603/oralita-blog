@@ -20,6 +20,6 @@ app_name = 'blog'
 
 urlpatterns = [
     path('', views.PostListView.as_view(),name='list'),    
-    path("articulo/<pk>", views.PostDetailView.as_view(), name="detail"),
-    path('categoria/<str:categoria>',views.articulos_filtrados, name='categoria'),
+    path("articulo/<slug:slug>", views.PostDetailView.as_view(), name="detail"),
+    path('categoria/<slug:slug>',views.articulos_filtrados, name='categoria'),
 ]
