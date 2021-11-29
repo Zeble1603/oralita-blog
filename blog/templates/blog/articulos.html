@@ -2,20 +2,13 @@
 {% load i18n %}
 {% load static %}
 
+
 {% block title %}{% translate especialidades.title %}{% endblock %}
 {% block og_title %}{% translate especialidades.og_title %}{% endblock %}
 {% block og_description %}{% translate especialidades.og_description %}{% endblock %}
 {% block meta_description %}{% translate especialidades.meta_description %}{% endblock %}
 
 {% block body %}
-    <div class="page-title page-title-doctor bg-pattern" data-bgcolor="2BAAA1">
-        <div class="page-title-overlay">
-            <div class="container">
-                <h1>Articulos</h1>
-                <h3>Description</h3>
-            </div>
-        </div>
-    </div>
     <div class="breadcrumbs">
         <div class="container">
             <div class="row">
@@ -26,26 +19,38 @@
             </div>
         </div>
     </div>
-    <div class="doctor">
 
-    <div class="container">
-    <div class="row">
-        {% for articulo in articulo_list %}
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img src="{{articulo.photo.url}}" alt="{{ articulo.titulo }}">
-                    <div class="caption">
-                        <div class="text-center">
-                            <h3>{{ articulo.titulo }}</h3>
-                            <p>{{ articulo.resumen|truncatewords:30 }}</p>
-                            <a  style="width: 50%" href="{% url 'blog:detail' slug=articulo.slug %}" class="btn btn-primary" role="button">Ver</a>
+    <div class="doctor">
+        <div class="container">
+            <div class="row row-cols-3 row-cols-md-2 g-4">
+                <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12">
+                    {% include "includes/cards.html" %}
+                </div>             
+            
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    {% include "includes/list_cats.html" %}
+                </div>
+            </div>
+        </div>    
+
+    <!--<div class="container">
+        <div class="row">
+            {% for articulo in articulo_list %}
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="{{articulo.photo.url}}" alt="{{ articulo.titulo }}">
+                        <div class="caption">
+                            <div class="text-center">
+                                <h3>{{ articulo.titulo }}</h3>
+                                <p>{{ articulo.resumen|truncatewords:30 }}</p>
+                                <a  style="width: 50%" href="{% url 'blog:detail' slug=articulo.slug %}" class="btn btn-primary" role="button">Ver</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
-    </div>
-    </div>
+            {% endfor %}
+        </div>
+    </div>-->
     </div>
 
 {% endblock %}

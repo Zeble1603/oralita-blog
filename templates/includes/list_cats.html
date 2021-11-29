@@ -1,0 +1,11 @@
+{% load i18n %}
+{% load static %}
+
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 make-text">
+        <div class="list-group">
+            {% for tag in tag_list %}
+                {% url 'blog:categoria' as cat %}
+                <a href="{% url 'blog:categoria' slug=tag.slug %}" class="list-group-item">{{tag.nombre}}</a>
+            {% endfor %}
+        </div>    

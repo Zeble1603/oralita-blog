@@ -15,6 +15,7 @@ class PostListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['articulo_list'] = Articulo.objects.filter(fecha__lte=timezone.now())
+        context['tag_list'] = Tag.objects.all()
         return context
 
 def articulos_filtrados(request,slug):
