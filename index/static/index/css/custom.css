@@ -14,5 +14,5 @@ p {
 }
 
 .thumbnail {
-    max-height: 350px;
+    max-height: auto;
 }

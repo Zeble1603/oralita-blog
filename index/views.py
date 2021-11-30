@@ -44,6 +44,16 @@ def class_by_name(module_name, class_name):
 # Index views 
 # ===========
 
+class EspecialidadDetailView(DetailView):
+    model = Especialidad
+    template_name = "especialidades.html"
+    extra_context = index_context
+
+class EspecialidadesListView(ListView):
+    model = Especialidad
+    template_name = "especialidades_list.html"
+    extra_context = index_context
+
 def homeview(request):
     home_context = {
         'especialidad' : Especialidad,
@@ -56,11 +66,6 @@ def homeview(request):
 def especialidades(request):
     return render(request, 'especialidades_list.html', context=index_context)
 
-class EspecialidadesListView(ListView):
-    model = Especialidad
-    template_name = "especialidades_list.html"
-    extra_context = index_context
-
 def especialidad_detail(request,name):
     especialidad = class_by_name('translations.es.especialidades',name)
     especialidad_context = {
@@ -68,12 +73,6 @@ def especialidad_detail(request,name):
     }
     especialidad_context.update(index_context)
     return render(request, 'especialidades.html', context=especialidad_context)
-
-class EspecialidadDetailView(DetailView):
-    model = Especialidad
-    template_name = "especialidades.html"
-    extra_context = index_context
-
 
 def quien(request):
     home_context = {
