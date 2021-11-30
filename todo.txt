@@ -1,3 +1,0 @@
--header.html l.98 --> check with David -----> Créer une fonction {%%} qui génère la liste des spécialités
--especialidades l.10 --> ~ ça veut dire quoi ? 
--check form 

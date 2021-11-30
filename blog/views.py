@@ -27,7 +27,7 @@ def articulos_filtrados(request,slug):
         'categoria':categoria
     }
     context.update(index_context)
-    return render(request,'categorias.html',context=context)
+    return render(request,'articulos.html',context=context)
 
 class PostDetailView(DetailView):
     model = Articulo
