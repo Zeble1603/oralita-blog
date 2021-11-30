@@ -5,7 +5,6 @@ from django.db.models.signals import pre_save
 from django.forms import CheckboxSelectMultiple
 from django.utils import timezone
 
-from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 # Create your models here.
 
@@ -17,6 +16,9 @@ class Autor(models.Model):
 
     def __str__(self):
         return "{} {} ".format(self.nombre,self.apellido)
+
+    class Meta:
+        verbose_name_plural = "Autores"    
 
 
 
