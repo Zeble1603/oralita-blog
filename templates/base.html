@@ -31,7 +31,7 @@
          STYLESHEETS
     ============================== -->
     {% block stylesheets %}
-        <link rel="stylesheet" href= {% static 'index/build/app.css' %}>
+        <link rel="stylesheet" href= {% static 'index/css/minified.css' %}>
     {% endblock %}
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113534654-1"></script>
@@ -54,7 +54,7 @@
 {% block body %}{% endblock %}
 {% include "includes/footer.html" %}
 {% block javascripts %}
-    <script src="{% static 'index/build/app.js' %}"></script>
+    <script src="{% static 'index/js/app.js' %}"></script>
 {% endblock %}
 </body>
 </html>

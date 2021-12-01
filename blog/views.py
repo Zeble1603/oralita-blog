@@ -20,11 +20,14 @@ class PostListView(ListView):
 
 def articulos_filtrados(request,slug):
     tag = Tag.objects.get(slug=slug)
+    tag_list = Tag.objects.all()
     categoria = tag.nombre
-    articulos_categoria = Articulo.objects.filter(fecha__lte=timezone.now(),tags__nombre=categoria)
+    articulo_list = Articulo.objects.filter(fecha__lte=timezone.now(),tags__nombre=categoria)
     context = {
-        'articulos_categoria':articulos_categoria,
-        'categoria':categoria
+        'articulo_list':articulo_list,
+        'categoria':categoria,
+        'tag_list' : tag_list,
+        'tag':tag,
     }
     context.update(index_context)
     return render(request,'articulos.html',context=context)

@@ -14,5 +14,11 @@ p {
 }
 
 .thumbnail {
-    max-height: 350px;
+    max-height: auto;
+}
+
+.author{
+    background: #f1f8f9;
+    border: 1px, solid, #e4edee;
+    padding: 5px;
 }

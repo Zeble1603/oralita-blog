@@ -1,0 +1,20 @@
+{% load static %}
+
+{% for articulo in articulo_list %}
+<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+    <div class="thumbnail" style="height: 500px; width:450px">
+        <a href = "{% url 'blog:detail' slug=articulo.slug%}">
+            <img src="{{articulo.photo.url}}" class="" alt="{{articulo.alt_img}}" style="width: 33rem; height: 20rem;">
+        </a>
+        <div class="caption">
+            <a href = "{% url 'blog:detail' slug=articulo.slug%}">
+                <h3>{{articulo.titulo}}</h3>
+            </a>    
+            <h5>Por <a href="{% url 'index:quienes-somos' %}">{{articulo.autor}}</a> | {{articulo.fecha|date:"j F Y"}}</h5>
+            <p style="line-height:18px;">{{articulo.resumen}}</p>
+        </div>
+    </div>
+</div>    
+{% endfor %} 
+
+

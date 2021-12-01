@@ -22,7 +22,7 @@
             <div class="row">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-home"><a href="{% url 'index:home' %}"><i class="fa fa-home"></i></a></li>
-                    <li>{% translate primera.title %}</li>
+                    <li class="active"><a href="{% url 'blog:list' %}">Articulos</a></li>
                 </ol>
             </div>
         </div>
@@ -37,11 +37,28 @@
                 <div>
                     {{articulo.texto|safe}}
                 </div>
+                <div class="author" style="background:#f1f8f9;padding:8px;">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="{% url 'index:quienes-somos' %}">
+                            <img class="media-object" src="{{articulo.autor.photo.url}}" alt="photo del autor" style="height:120px;width:120px;">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading"><a style="color:#455f68;" href="{% url 'index:quienes-somos' %}">
+                                {{articulo.autor.nombre}} {{articulo.autor.apellido}}</a></h3>
+                            <p>{{articulo.autor.descripcion}}
+                        </div>
+                    </div>
+                </div>    
             </div>
+
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 {% include "includes/cita.html" %}
             </div>
         </div>
     </div>
 
+    
+                 
 {% endblock %}
