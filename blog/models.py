@@ -3,10 +3,12 @@ from django.db import models
 from django.db.models import ManyToManyField
 from django.db.models.signals import pre_save
 from django.forms import CheckboxSelectMultiple
-from django.utils import timezone
+from django.urls import reverse
 
 from ckeditor_uploader.fields import RichTextUploadingField
-# Create your models here.
+
+
+# Models used on this app
 
 class Autor(models.Model):
     nombre = models.CharField(max_length=200)
@@ -29,6 +31,10 @@ class Tag(models.Model):
     def __str__(self):
         return self.nombre
 
+    def get_absolute_url(self):
+        return reverse("blog:categoria", kwargs={"slug": self.slug})
+        
+
 class TagModelAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("nombre",)}
 
@@ -49,6 +55,10 @@ class Articulo(models.Model):
 
     def __str__(self):
         return self.titulo
+
+    def get_absolute_url(self):
+        return reverse("blog:detail", kwargs={"slug": self.slug})
+        
 
         
 class ArticuloModelAdmin(admin.ModelAdmin):

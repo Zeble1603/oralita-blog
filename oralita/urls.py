@@ -17,14 +17,28 @@ from django.conf.urls.i18n import i18n_patterns
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
 from django.urls import path
 from django.urls.conf import include
-from os import name, stat
+from os import name
 
+##########
+#SITE MAP#
+##########
+
+from sitemaps import ArticuloSiteMap,TagSiteMap
+
+sitemaps = {
+    'articulos' : ArticuloSiteMap,
+    'tags': TagSiteMap,
+}
+
+##########
 
 urlpatterns = [
     path('i18n/',include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
+    path("sitemap.xml", sitemap, {'sitemaps':sitemaps}),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
