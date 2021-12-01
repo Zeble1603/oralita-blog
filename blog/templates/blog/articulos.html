@@ -2,7 +2,6 @@
 {% load i18n %}
 {% load static %}
 
-
 {% block title %}{% translate especialidades.title %}{% endblock %}
 {% block og_title %}{% translate especialidades.og_title %}{% endblock %}
 {% block og_description %}{% translate especialidades.og_description %}{% endblock %}
@@ -14,7 +13,14 @@
             <div class="row">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-home"><a href="{% url 'index:home' %}"><i class="fa fa-home"></i></a></li>
-                    <li class="active">Articulos</li>
+                    {% url 'blog:categoria' slug=tag.slug as cat %}
+                    {% if request.path == cat %}
+                        <li class="active"><a href="{% url 'blog:list' %}">Articulos</a></li>
+                        <li class="active">{{tag.nombre}}</li>
+                    {% else %}
+                        <li class="active">Articulos</a></li>    
+                    {% endif %}
+
                 </ol>
             </div>
         </div>

@@ -26,7 +26,8 @@ def articulos_filtrados(request,slug):
     context = {
         'articulo_list':articulo_list,
         'categoria':categoria,
-        'tag_list' : tag_list
+        'tag_list' : tag_list,
+        'tag':tag,
     }
     context.update(index_context)
     return render(request,'articulos.html',context=context)
