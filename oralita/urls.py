@@ -26,14 +26,17 @@ from os import name
 #SITE MAP#
 ##########
 
-from sitemaps import ArticuloSiteMap,TagSiteMap
+from sitemaps import ArticuloSiteMap,TagSiteMap,StaticViewSiteMap
 
 sitemaps = {
     'articulos' : ArticuloSiteMap,
     'tags': TagSiteMap,
+    'static':StaticViewSiteMap,
 }
 
-##########
+#############
+#URLS ROUTES#
+#############
 
 urlpatterns = [
     path('i18n/',include('django.conf.urls.i18n')),
