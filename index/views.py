@@ -107,4 +107,4 @@ def contact(request):
         'especialidad_list' : Especialidad.objects.all()
     }
     index_context.update(home_context)
-    return render(request, 'primera_visita.html', context=index_context)
+    return render(request, 'form/contact.html', context=index_context)
