@@ -44,6 +44,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'modeltranslation',
     'django.contrib.admin',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -55,6 +57,8 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
 
 ]
+
+SITE_ID = 1
 
 ####################################
 ###CKEDITOR CONFIGURATION TOOLBAR###

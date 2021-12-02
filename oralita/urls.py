@@ -17,14 +17,34 @@ from django.conf.urls.i18n import i18n_patterns
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
 from django.urls import path
 from django.urls.conf import include
-from os import name, stat
+from django.views.generic.base import TemplateView
+from os import name
 
+
+##########
+#SITE MAP#
+##########
+
+from sitemaps import ArticuloSiteMap,TagSiteMap,StaticViewSiteMap
+
+sitemaps = {
+    'articulos' : ArticuloSiteMap,
+    'tags': TagSiteMap,
+    'static':StaticViewSiteMap,
+}
+
+#############
+#URLS ROUTES#
+#############
 
 urlpatterns = [
+    path('robot.txt', TemplateView.as_view(template_name="robot.txt",content_type="text/plain")),
     path('i18n/',include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
+    path("sitemap.xml", sitemap, {'sitemaps':sitemaps}),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
