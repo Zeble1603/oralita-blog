@@ -1,10 +1,17 @@
 import importlib
+from django.conf import settings
+from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.views.generic import ListView,DetailView
-
+from django.utils.translation import get_language
 from .models import Especialidad
 from translations.es.messages import *
 from translations.es.especialidades import *
+import environ
+
+from mailjet_rest import Client
+
+
 
 # ================================================= 
 # Context used in the different views for index app
@@ -24,6 +31,7 @@ index_context = {
         'horario':Horario,  
         'contact':Contact,
         'thanks': Thanks,
+        'recaptcha_site_key':settings.GOOGLE_RECAPTCHA_SITE_KEY
     }
 
 # ================
@@ -108,3 +116,61 @@ def contact(request):
     }
     index_context.update(home_context)
     return render(request, 'form/contact.html', context=index_context)
+
+
+
+#Form correctly filled, send email. 
+
+def contact_submit(request):
+    env = environ.Env()
+    environ.Env.read_env()
+
+    API_KEY = env('MJ_APIKEY_PUBLIC')
+    API_SECRET = env('MJ_APIKEY_PRIVATE')
+
+    mailjet = Client(auth=(API_KEY, API_SECRET),version='v3.1')
+
+    message = """
+    Solicitud de cita
+    Locale : {}
+    Desde: {}
+    Teléfone: {}
+    E-mail: {}
+    Fecha: {} {}
+    Mensaje: {}
+    """.format(
+        get_language(),
+        request.POST['name'],
+        request.POST['phone'],
+        request.POST['email'],
+        request.POST['date'], request.POST['time'],
+        request.POST['message'],
+    )
+
+    data = {
+                'Messages': [   
+                    {
+                    "From": {
+                        "Email": "info@oralita.com",
+                        "Name": "Oralita.com"
+                    },
+                    "To": [
+                        {
+                        "Email": "blaisedecarvalho@gmail.com",
+                        "Name": "You"
+                        }
+                    ],
+                    "Subject": "Solicitud de cita!",
+                    "TextPart": message,
+                    }
+                ]
+            }
+
+    result = mailjet.send.create(data=data)
+    print(API_KEY,API_SECRET,result.status_code)
+
+    return HttpResponse("""<div class="message message-close message-success">
+			<button type="button" class="message-close-button"><i class="fa fa-close"></i></button>
+			<div class="alert alert-success">Votre message a été envoyé</div>
+		    </div>""") 
+    

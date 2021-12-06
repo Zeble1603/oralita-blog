@@ -17,6 +17,9 @@ class TagSiteMap(Sitemap):
 
 class StaticViewSiteMap(Sitemap):
 
+    i18n=True
+    changefreq='monthly'
+
     def items(self):
         return ['index:home','index:quienes-somos','index:donde','index:primera_visita','index:contact']
 

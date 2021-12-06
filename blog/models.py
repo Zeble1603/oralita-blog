@@ -49,7 +49,6 @@ class Articulo(models.Model):
     texto = RichTextUploadingField(blank=True, null=True)
     fecha = models.DateTimeField(blank=True,null=True)
     tags = models.ManyToManyField(Tag,blank=True)
-    publicado = models.BooleanField(default=False)
     slug = models.SlugField(unique=True)
     autor = models.ForeignKey(Autor, on_delete=models.CASCADE,null=True,blank=True)
 
