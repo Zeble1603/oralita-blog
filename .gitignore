@@ -1,4 +1,5 @@
 oralita/.env
+oralita/.env.prod
 **/__pycache__
 db.squile3
 media
