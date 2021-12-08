@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import environ
+import os
 
 # Initialize environement variables
 env = environ.Env()
@@ -166,11 +167,11 @@ WSGI_APPLICATION = 'oralita.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd7jslnrk86e4aq',
-        'USER': 'urvzzugslpvoem',
-        'PASSWORD': '903fc3193376349cf0257231a7d37cbc478b39c5d8ad0c4acf2f5575fd46c7cc',
-        'HOST': 'ec2-54-195-246-55.eu-west-1.compute.amazonaws.com',
-        'PORT': '5432',
+        'NAME': os.environ.get('NAME'),
+        'USER': os.environ.get('USER'),
+        'PASSWORD': os.environ.get('PASSWORD'),
+        'HOST': os.environ.get('HOST'),
+        'PORT': os.environ.get('PORT'),
     }
 }
 
