@@ -166,11 +166,11 @@ WSGI_APPLICATION = 'oralita.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('NAME'),
-        'USER': env('USER'),
-        'PASSWORD': env('PASSWORD'),
-        'HOST': env('HOST'),
-        'PORT': env('PORT'),
+        'NAME': 'd7jslnrk86e4aq',
+        'USER': 'urvzzugslpvoem',
+        'PASSWORD': '903fc3193376349cf0257231a7d37cbc478b39c5d8ad0c4acf2f5575fd46c7cc',
+        'HOST': 'ec2-54-195-246-55.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
