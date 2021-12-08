@@ -22,3 +22,42 @@ p {
     border: 1px, solid, #e4edee;
     padding: 5px;
 }
+
+.msc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.msc-list a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 0;
+    color: var(--color-primary);
+    color: var(--color-primary-text);
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+.msc-list a:hover, .msc-list a:focus, .msc-list a:active {
+    padding-left: 5px;
+    color: var(--color-primary);
+}
+.msc-list a:first-child {
+    border-radius: 0;
+}
+.msc-list a:last-child {
+    border-radius: 0;
+}
+.msc-list a.active {
+    padding-left: 5px;
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.msc-list.msc-list__border a {
+    border-top: 1px dashed var(--color-border);
+}
+
+  
