@@ -13,10 +13,12 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import environ
 import os
+import django_heroku
 
 # Initialize environement variables
-env = environ.Env()
-environ.Env.read_env()
+
+
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -32,9 +34,9 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
-GOOGLE_RECAPTCHA_SITE_KEY = env('GOOGLE_RECAPTCHA_SITE_KEY')
-GOOGLE_RECAPTCHA_SECRET_KEY  = env('GOOGLE_RECAPTCHA_SECRET_KEY')
+SECRET_KEY = os.environ['SECRET_KEY']
+GOOGLE_RECAPTCHA_SITE_KEY = os.environ['GOOGLE_RECAPTCHA_SITE_KEY']
+GOOGLE_RECAPTCHA_SECRET_KEY  = os.environ['GOOGLE_RECAPTCHA_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -167,11 +169,11 @@ WSGI_APPLICATION = 'oralita.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('NAME'),
-        'USER': os.environ.get('USER'),
-        'PASSWORD': os.environ.get('PASSWORD'),
-        'HOST': os.environ.get('HOST'),
-        'PORT': os.environ.get('PORT'),
+        'NAME': os.environ['NAME'],
+        'USER': os.environ['USER'],
+        'PASSWORD': os.environ['PASSWORD'],
+        'HOST': os.environ['HOST'],
+        'PORT': os.environ['PORT'],
     }
 }
 
@@ -233,3 +235,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Activate django - Heroku 
+django_heroku.settings(locals())
