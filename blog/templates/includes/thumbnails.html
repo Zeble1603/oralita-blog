@@ -2,7 +2,7 @@
 
 {% for articulo in articulo_list %}
 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-    <div class="thumbnail" style="height: 500px; width:450px">
+    <div class="thumbnail blog-item" style="height: 500px; width:450px">
         <a href = "{% url 'blog:detail' slug=articulo.slug%}">
             <img src="{{articulo.photo.url}}" class="" alt="{{articulo.alt_img}}" style="width: 33rem; height: 20rem;">
         </a>

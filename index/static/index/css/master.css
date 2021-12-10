@@ -25,3 +25,6 @@
 @import url('lib/theme.css');
 @import url('responsive.css');
 @import url('custom.css');
+
+/* BLOG CSS */
+@import url('blog.css');
