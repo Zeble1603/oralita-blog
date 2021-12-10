@@ -535,8 +535,8 @@ msgstr "Gràcies per validar el captcha"
 
 #: .\translations\ca\messages.py:24 .\translations\es\messages.py:24
 msgid ""
-"Copyright &copy; 2017 Oralitá | Made by <a href=\"http://www.david-courtey."
-"com/\" target=\"_blank\">David Courtey</a>"
+"Copyright &copy; 2017 Oralitá | Made by <a href=\"https://www.linkedin.com/in/blaisedecarvalho/."
+"com/\" target=\"_blank\">Blaise De Carvalho</a>"
 msgstr ""
 
 #: .\translations\ca\messages.py:27 .\translations\ca\messages.py:30

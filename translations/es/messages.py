@@ -21,7 +21,7 @@ class Global:
     hour= _("Hora")
     cancel= _("Anular")
     validate_captcha= _("Gracias por validar el captcha")
-    footer=  _("""Copyright &copy; 2017 Oralitá | Made by <a href="http://www.david-courtey.com/" target="_blank">David Courtey</a>""")
+    footer=  _("""Copyright &copy; 2017 Oralitá | Made by <a href="https://www.linkedin.com/in/blaisedecarvalho/" target="_blank">Blaise De Carvalho</a>""")
 
 class Default:
     title= _("Clínica Dental - Odontologia i Medicina Oral")
