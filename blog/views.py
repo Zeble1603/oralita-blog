@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render,get_object_or_404,redirect
 from django.views.generic import ListView,DetailView
 from django.utils import timezone
+from index.models import Especialidad
 
 from .models import *
 from index.views import index_context
@@ -16,6 +17,8 @@ class PostListView(ListView):
         context = super().get_context_data(**kwargs)
         context['articulo_list'] = Articulo.objects.filter(fecha__lte=timezone.now())
         context['tag_list'] = Tag.objects.all()
+        context['especialidad'] = Especialidad
+        context['especialidad_list'] = Especialidad.objects.all()
         return context
 
 def articulos_filtrados(request,slug):
