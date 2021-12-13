@@ -8,7 +8,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class Especialidad(models.Model):
     title = models.CharField(max_length=200)
     meta_title = models.CharField(max_length=200,blank=True,null=True)
-    image = models.ImageField(upload_to='especialidades')
+    image = models.ImageField(upload_to='especialidades',blank=True,null=True)
     description = models.TextField(max_length=200)
     meta_description = models.TextField(max_length=200,blank=True,null=True)
     alt_img = models.CharField(max_length=200)

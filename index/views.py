@@ -65,7 +65,7 @@ class EspecialidadesListView(ListView):
 def homeview(request):
     home_context = {
         'especialidad' : Especialidad,
-        'especialidad_list' : Especialidad.objects.all()
+        'especialidad_list' : Especialidad.objects.order_by('id')
     }
     index_context.update(home_context)
     return render(request, 'home.html', context=index_context)
