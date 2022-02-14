@@ -3,7 +3,7 @@
 <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 make-text">
         <h3>{% translate form.title|upper%}</h3>
-        <form class="bookform-form" action="" role="form" method="post">
+        <form class="bookform-form" action="{% url 'index:contact_submit' %}" role="form" method="post">{% csrf_token %}
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 booking-form-item name">
                     <input type="text" name="name" id="name1" data-validation="required" placeholder="{% translate global.name_label|upper %}" />
