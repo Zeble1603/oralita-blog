@@ -35,6 +35,7 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['SECRET_KEY']
 GOOGLE_RECAPTCHA_SITE_KEY = os.environ['GOOGLE_RECAPTCHA_SITE_KEY']
+
 GOOGLE_RECAPTCHA_SECRET_KEY  = os.environ['GOOGLE_RECAPTCHA_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
