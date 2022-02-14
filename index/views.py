@@ -156,7 +156,7 @@ def contact_submit(request):
                     },
                     "To": [
                         {
-                        "Email": "blaisedecarvalho@gmail.com",
+                        "Email": "info@oralita.com",
                         "Name": "You"
                         }
                     ],
