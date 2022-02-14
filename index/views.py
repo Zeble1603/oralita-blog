@@ -171,6 +171,6 @@ def contact_submit(request):
 
     return HttpResponse("""<div class="message message-close message-success">
 			<button type="button" class="message-close-button"><i class="fa fa-close"></i></button>
-			<div class="alert alert-success">Votre message a été envoyé</div>
+			<div class="alert alert-success">Su mensaje ha sido enviado</div>
 		    </div>""") 
     
