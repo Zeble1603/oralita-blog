@@ -8,7 +8,8 @@ from .models import Especialidad
 from translations.es.messages import *
 from translations.es.especialidades import *
 import environ
-
+import urllib
+import json
 from mailjet_rest import Client
 
 
@@ -127,50 +128,67 @@ def contact_submit(request):
 
     API_KEY = env('MJ_APIKEY_PUBLIC')
     API_SECRET = env('MJ_APIKEY_PRIVATE')
+    if request.method == 'POST':
+        #---- captcha -----#
+        recaptcha_response = request.POST.get('g-recaptcha-response')
+        url = 'https://www.google.com/recaptcha/api/siteverify'
+        values = {
+                    'secret': env('GOOGLE_RECAPTCHA_SECRET_KEY'),
+                    'response': recaptcha_response
+                }
+        data = urllib.parse.urlencode(values).encode()
+        req =  urllib.request.Request(url, data=data)
+        response = urllib.request.urlopen(req)
+        result = json.loads(response.read().decode())
+        #---- email send -----#
+        if result: # if captcha is successful 
+            mailjet = Client(auth=(API_KEY, API_SECRET),version='v3.1')
 
-    mailjet = Client(auth=(API_KEY, API_SECRET),version='v3.1')
+            message = """
+            Solicitud de cita
+            Locale : {}
+            Desde: {}
+            Teléfone: {}
+            E-mail: {}
+            Fecha: {} {}
+            Mensaje: {}
+            """.format(
+                get_language(),
+                request.POST['name'],
+                request.POST['phone'],
+                request.POST['email'],
+                request.POST['date'], request.POST['time'],
+                request.POST['message'],
+            )
 
-    message = """
-    Solicitud de cita
-    Locale : {}
-    Desde: {}
-    Teléfone: {}
-    E-mail: {}
-    Fecha: {} {}
-    Mensaje: {}
-    """.format(
-        get_language(),
-        request.POST['name'],
-        request.POST['phone'],
-        request.POST['email'],
-        request.POST['date'], request.POST['time'],
-        request.POST['message'],
-    )
-
-    data = {
-                'Messages': [   
-                    {
-                    "From": {
-                        "Email": "info@oralita.com",
-                        "Name": "Oralita.com"
-                    },
-                    "To": [
-                        {
-                        "Email": "info@oralita.com",
-                        "Name": "You"
-                        }
-                    ],
-                    "Subject": "Solicitud de cita!",
-                    "TextPart": message,
+            data = {
+                        'Messages': [   
+                            {
+                            "From": {
+                                "Email": "info@oralita.com",
+                                "Name": "Oralita.com"
+                            },
+                            "To": [
+                                {
+                                "Email": "blaisedecarvalho@gmail.com",
+                                "Name": "You"
+                                }
+                            ],
+                            "Subject": "Solicitud de cita!",
+                            "TextPart": message,
+                            }
+                        ]
                     }
-                ]
-            }
 
-    result = mailjet.send.create(data=data)
-    print(API_KEY,API_SECRET,result.status_code)
+            result = mailjet.send.create(data=data)
+            print(API_KEY,API_SECRET,result.status_code)
 
-    return HttpResponse("""<div class="message message-close message-success">
-			<button type="button" class="message-close-button"><i class="fa fa-close"></i></button>
-			<div class="alert alert-success">Su mensaje ha sido enviado</div>
-		    </div>""") 
-    
+            return HttpResponse("""<div class="message message-close message-success">
+                    <button type="button" class="message-close-button"><i class="fa fa-close"></i></button>
+                    <div class="alert alert-success">Su mensaje ha sido enviado</div>
+                    </div>""") 
+        else:
+            return HttpResponse("""<div class="message message-close message-danger">
+                    <button type="button" class="message-close-button"><i class="fa fa-close"></i></button>
+                    <div class="alert alert-danger">Su mensaje NO ha sido enviado</div>
+                    </div>""") 
