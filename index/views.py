@@ -141,7 +141,7 @@ def contact_submit(request):
         response = urllib.request.urlopen(req)
         result = json.loads(response.read().decode())
         #---- email send -----#
-        if result: # if captcha is successful 
+        if result['success']==True: # if captcha is successful 
             mailjet = Client(auth=(API_KEY, API_SECRET),version='v3.1')
 
             message = """
